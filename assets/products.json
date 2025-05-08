@@ -1,0 +1,1588 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Classic Cotton T-shirt",
+      "category": "T-shirts",
+      "price": 966,
+      "images": [
+        "https://imgs.search.brave.com/arhRk40nX0-kDzG65bzg9xb8viMike9__BrnXtK5zu8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL3ZhZGVyLXBy/b2QuczMuYW1hem9u/YXdzLmNvbS8xNjcw/OTUxMTU4LTYtMTY3/MDk1MTE1NS5qcGc_/Y3JvcD0xeHc6MXho/O2NlbnRlcix0b3Am/cmVzaXplPTk4MDoq",
+        "https://imgs.search.brave.com/FpFRf0XdG4xUENQ16-efUhJCB9a4ee9iXAVOcUpUgKQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kaW1n/LmRpbGxhcmRzLmNv/bS9pcy9pbWFnZS9E/aWxsYXJkc1pvb20v/bmF2Mi9jcmVtaWV1/eC1ibHVlLWxhYmVs/LXNob3J0LXNsZWV2/ZS1zb2xpZC1jcmV3/bmVjay10LXNoaXJ0/LzAwMDAwMDAwX3pp/XzRlYTMzOWVhLWI5/ZDctNGU4Yy1hNGEx/LTQyMmQzN2UxZWJi/Ni5qcGc",
+        "https://imgs.search.brave.com/pQ6jhgImDsDAo8HzKrcAiUPBVdKthuTKnvwRXV9DKqM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDF0OFdoZHlTUUwu/anBn",
+        "https://imgs.search.brave.com/9AjhYNnPiBZ5VZOSBm6FVMjBbBR1ypcYm3BPGl4-EKo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4x/MS5iaWdjb21tZXJj/ZS5jb20vcy1pc2hy/YnFpY25vL2ltYWdl/cy9zdGVuY2lsLzUw/MHg1MDAvcHJvZHVj/dHMvNjMyLzc2OTMv/NjcwMDAtMkc2LWFs/dDFfXzM4OTA5LjE2/OTI3Mjk1OTYuMzg2/LjUxM19fNzk2MzEu/MTY5NDE4MTk0MS5q/cGc_Yz0x"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "Navy Blue",
+          "White",
+          "Grey"
+        ]
+      },
+      "rating": 3.2,
+      "reviews": [
+        {
+          "name": "Arjun",
+          "rating": 4,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Sunny",
+          "rating": 3,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Raj",
+          "rating": 3,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Aman",
+          "rating": 3,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Graphic Printed Tee",
+      "category": "T-shirts",
+      "price": 1244,
+      "images": [
+        "https://imgs.search.brave.com/6ERmniITi8byrYGxKjAZ9QXbJKfskJf54wrOwVcu8wI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vRmF0/aGVyLXMtRGF5LVdv/cmxkLXMtR3JlYXRl/c3QtRGFkLU1lbi1z/LWFuZC1CaWctTWVu/LXMtR3JhcGhpYy1U/ZWUtZnJvbS1XYXkt/dG8tQ2VsZWJyYXRl/LVNpemVzLVMtM1hM/XzE5MzgyNDA3LTg1/NjAtNDlmYS1hY2Iw/LTQ2MzI1NmMxYzU1/My5jNTIxZWQwNjJk/YTA0ODQ4ZWE4Njkx/MWQ4YmJmZTEzYi5q/cGVnP29kbkhlaWdo/dD03ODQmb2RuV2lk/dGg9NTgwJm9kbkJn/PUZGRkZGRg",
+        "https://imgs.search.brave.com/cFV7yHKSR4vIU74yuc7Gw66i9B3EXcsWANZBNnU3c24/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vQ2hh/bXByby1WaXNpb24t/QWR1bHQtVC1TaGly/dC1KZXJzZXktVGVh/bS1Db2xvcnMtTWFy/b29uLTNYTF81ZTFm/ZTQ1OS01NDI0LTQw/N2ItYjNlMS1lNzY1/ZGZkYjRhYjguM2Q4/YzNhZTQzOWJmMGYz/NDNmYTNlYzNkZGFh/MTA1NDIuanBlZz9v/ZG5IZWlnaHQ9NTgw/Jm9kbldpZHRoPTU4/MCZvZG5CZz1GRkZG/RkY"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "Maroon"
+        ]
+      },
+      "rating": 4,
+      "reviews": [
+        {
+          "name": "Manish",
+          "rating": 5,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Raj",
+          "rating": 3,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Neeraj",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Arjun",
+          "rating": 4,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "V-Neck Soft Tee",
+      "category": "T-shirts",
+      "price": 1786,
+      "images": [
+        "https://imgs.search.brave.com/A6R0UPadZPoruhPm84uWhb8_8_t-X6fce_OhNcB_u2M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVz/aGNsZWFudGVlcy5j/b20vY2RuL3Nob3Av/ZmlsZXMvQ1JFV05F/Q0tTQmxhY2tfMzIw/eC5qcGc_dj0xNzE0/Nzc3NzUx",
+        "https://imgs.search.brave.com/gvbQvo1SdLpT1GVmvjqnAURFCu8FtWy9PdxCZpz-bpU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFCZzVuYm5uTEwu/anBn",
+        "https://imgs.search.brave.com/PrwDesLvwt7HS1saNb5otpV7DIeEe4pRuYaDb2ZaCrk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90YWls/b3JlZGF0aGxldGUu/Y29tL2Nkbi9zaG9w/L2ZpbGVzL2VzZWVu/dGlhbHZuZWNrX3do/aXRlMDAwMDFfMTIw/MHguanBnP3Y9MTc0/Mjg1MDY4Mw"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "Grey",
+          "White"
+        ]
+      },
+      "rating": 4,
+      "reviews": [
+        {
+          "name": "Deepak",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Ravi",
+          "rating": 3,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Raj",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Henley Neck Tee",
+      "category": "T-shirts",
+      "price": 1590,
+      "images": [
+        "https://imgs.search.brave.com/Kg3LEBWL2g4Hk9CPCZVGPoPzh30ZrfJv_i6fkHN0TH0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzAx/MjMvNTA2NS8yNDcz/L2ZpbGVzLzY2X0JN/MTExNDMuMjgzTkFU/VldfTkFUVVJBTC1W/RU5JQ0UtV0FTSC1U/SEVSTUFMLUhFTkxF/WV8wNDc1MF8wN2E1/NWU1NS0zN2U2LTRi/ZjUtYjM3Ni0wYTVh/ZTM0NzE1ZGQuanBn/P3Y9MTcyNDkwMTUy/OCZmb3JtYXQ9d2Vi/cCZ3aWR0aD03MDAm/aGVpZ2h0PTcwMA",
+        "https://imgs.search.brave.com/H11p5mBZOZXafmwApyDnP5xukKEvjuUgcNCumw71nHo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzAx/MjMvNTA2NS8yNDcz/L2ZpbGVzL0JNMTEz/MTUuMjgzU0NUX1Zp/bnRhZ2VfVGhlcm1h/bF9IZW5sZXlfU2t5/X0NhcHRhaW5fMDM0/Ni5qcGc_dj0xNzI4/NTA0MjE5JmZvcm1h/dD13ZWJwJndpZHRo/PTcwMCZoZWlnaHQ9/NzAw"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "White",
+          "Navy Blue"
+        ]
+      },
+      "rating": 4,
+      "reviews": [
+        {
+          "name": "Deepak",
+          "rating": 5,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Aman",
+          "rating": 3,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Arjun",
+          "rating": 4,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Oversized Streetwear Tee",
+      "category": "T-shirts",
+      "price": 1157,
+      "images": [
+        "https://imgs.search.brave.com/vvwKU-ZTKhz0Jeeh93dnApSMNmharr0wo7swIvNkAKs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tbm1s/LmxhL2Nkbi9zaG9w/L2ZpbGVzL0hlYXZ5/LUV2ZXJ5LURheS1C/b3h5LVRlZS1XaGl0/ZS0yX2FmYTFmNjU2/LmpwZz92PTE3NDM3/NzgzNDQmd2lkdGg9/NDMw",
+        "https://imgs.search.brave.com/gjmJuLXSltzkEJSoLp4PxZyQ-IarJ5IbwmmrvRBGm9o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFXcGVSTkp4TEwu/anBn",
+        "https://imgs.search.brave.com/KSmucTyAOtcKzF8ZAfEJZI7sKcqBSEoJOKxjHKYv35I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vU3Bv/cnRzLUdyZXktU2hp/cnQtZm9yLU1lbi1H/aWxkYW4tMjAwMC1N/ZW4tVC1TaGlydC1D/b3R0b24tTWVuLVNo/aXJ0LU9yaWdpbmFs/LU1lbi1zLVNoaXJ0/cy1CZXN0LU1lbnMt/Q2xhc3NpYy1TaG9y/dC1TbGVldmUtVGVl/XzgzODc3ZDM2LTJj/Y2EtNDFhMi1iNDE2/LWNlNDg3NTljMGY1/ZS4wMmYxZjRlYmU1/NGYyYjQyODU4ZDVk/YmEzYTNjNDk3ZS5q/cGVnP29kbkhlaWdo/dD01ODAmb2RuV2lk/dGg9NTgwJm9kbkJn/PUZGRkZGRg"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XXL"
+        ],
+        "colors": [
+          "White",
+          "Navy Blue",
+          "Grey"
+        ]
+      },
+      "rating": 4.3,
+      "reviews": [
+        {
+          "name": "Aman",
+          "rating": 5,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Neeraj",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Sahil",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Checked Casual Shirt",
+      "category": "Shirts",
+      "price": 510,
+      "images": [
+        "https://imgs.search.brave.com/m1gBHx0dUmv5gOBtvl6HE9U0Vwv3pRD8tTqqER9tM8c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTF5c3RTYlZDUUwu/anBn",
+        "https://imgs.search.brave.com/oXgBsvRNTxh6SVJO42zaedI91TtkDgOEtGOQ64oe_k4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zcHlr/YXIuY29tL2Nkbi9z/aG9wL3Byb2R1Y3Rz/L1ZUdk1NMkQ2Sy1N/U0hTT1MyQkMxNTMt/V0hJVEUtXzEud2Vi/cD92PTE3NDY0NDYx/ODE"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White"
+        ]
+      },
+      "rating": 3.7,
+      "reviews": [
+        {
+          "name": "Tarun",
+          "rating": 3,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Ritesh",
+          "rating": 4,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        },
+        {
+          "name": "Manish",
+          "rating": 4,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Solid Formal Shirt",
+      "category": "Shirts",
+      "price": 1081,
+      "images": [
+        "https://imgs.search.brave.com/fM9Mg3s03AqAzxx1vdoXFyrCIA88Bn-PZqeYARi6e7I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFHb3dLOGpXSkwu/anBn",
+        "https://imgs.search.brave.com/a3JeTJD7JzhNmiFaKVo2rjGvzui4TFwS43umD9eg0p0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibGFj/a2JlcnJ5cy5jb20v/Y2RuL3Nob3AvZmls/ZXMvZm9ybWFsLXNo/aXJ0LWluLXdoaXRl/LXNhaWxvci1ibGFj/a2JlcnJ5cy1jbG90/aGluZy02XzJiNjkw/NzI2LWQ1NTQtNDg3/ZC05M2VhLWVlZTM3/NGFmNzBhNV81MzN4/LmpwZz92PTE3MTk0/NzAwMDA",
+        "https://imgs.search.brave.com/G0TAQTq1b47kCwrayWn1oNrhoeJDfSLwIkRC1jBqzDE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzEtR2FrQkx4V0wu/anBn"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XXL"
+        ],
+        "colors": [
+          "Maroon",
+          "White",
+          "Black"
+        ]
+      },
+      "rating": 3.8,
+      "reviews": [
+        {
+          "name": "Sunny",
+          "rating": 3,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Neeraj",
+          "rating": 3,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Ravi",
+          "rating": 5,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Ritesh",
+          "rating": 4,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Linen Summer Shirt",
+      "category": "Shirts",
+      "price": 1086,
+      "images": [
+        "https://imgs.search.brave.com/rk_ZV87em10J8Xuh-a1179RFWajQYrRCDBsP0jF_OJc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb250/ZW50Lm1vc3MuY28u/dWsvaW1hZ2VzL2V4/dHJhZXh0cmFsYXJn/ZS85NjY5NDkwNjZf/MDEuanBn",
+        "https://imgs.search.brave.com/GEpCbeUaBhs6cM2XSYVPDkYS-M8G9oXMQY_RAPKkTvc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYWdp/Y2xpbmVuLmNvbS9j/ZG4vc2hvcC9wcm9k/dWN0cy9XRU5HRU4t/c2hpcnQtaW4tYmxh/Y2stMi1NQUlOLTIu/anBnP2Nyb3A9Y2Vu/dGVyJmhlaWdodD01/MDAmdj0xNjc5OTI4/NTE5JndpZHRoPTQw/MA",
+        "https://imgs.search.brave.com/FbwFJSRFIv4fwo1rLJ4jBaxVWj_ihe5ghGpWL2482f0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YmV5b3Vycy5pbi9j/ZG4vc2hvcC9wcm9k/dWN0cy9nZXJtYW4t/Z3JleS1jbGFzc2lj/LXNoaXJ0LTUuanBn/P3Y9MTY3MjY0MjY1/MCZ3aWR0aD0xMjAw",
+        "https://imgs.search.brave.com/rWk-NjYYFDPFyYZ_T-rf9jzjqFyju6kXNwUM-CWAjso/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFPWnEtSmtYRUwu/anBn"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "XXL"
+        ],
+        "colors": [
+          "White",
+          "Black",
+          "Grey",
+          "Navy Blue"
+        ]
+      },
+      "rating": 3.8,
+      "reviews": [
+        {
+          "name": "Deepak",
+          "rating": 3,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Sahil",
+          "rating": 4,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Ritesh",
+          "rating": 4,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Ravi",
+          "rating": 4,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Denim Button-Up",
+      "category": "Shirts",
+      "price": 988,
+      "images": [
+        "https://imgs.search.brave.com/JJaVuDmM2_iFcAhDp0_H7s9JMSICGk3ae9yEMcbE6tA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzAx/MjMvNTA2NS8yNDcz/L2ZpbGVzL0JNMTMz/NjguNjc5V0hUX1dI/SVRFLURSQVBFRC1M/SU5FTi1MT1VOR0Ut/TElaQVJELVNISVJU/X1dISVRFXzM4OV8y/LmpwZz92PTE3NDMx/MzI4NTQmZm9ybWF0/PXdlYnAmd2lkdGg9/NzAwJmhlaWdodD03/MDA",
+        "https://imgs.search.brave.com/QtMsBfdRoKIaciHW8W4JmL62FcWzx1g_laeZqdFsago/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3F1YXJlc3Bh/Y2UtY2RuLmNvbS9j/b250ZW50L3YxLzY0/MTFkNzI1MjI0ZDBj/N2YyOWQ1MDU5NS8x/Njc5NTE5MzI2MDIz/LU9LMkRUSjQ5OFAz/SFVKSTgyMVFYL0Js/YWNrK2RlbmltKDEp/LmpwZw"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "colors": [
+          "White",
+          "Black"
+        ]
+      },
+      "rating": 3.8,
+      "reviews": [
+        {
+          "name": "Raj",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Manish",
+          "rating": 4,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Arjun",
+          "rating": 3,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Deepak",
+          "rating": 3,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Flannel Warm Shirt",
+      "category": "Shirts",
+      "price": 1522,
+      "images": [
+        "https://imgs.search.brave.com/oPbqbb-AHhGURInReXj26KZoYUgUlfcAa3j1vgvFVqo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sdXhp/cmUuY29tL2Nkbi9z/aG9wL3Byb2R1Y3Rz/L01hcm9vbkZsYW5u/ZWxfMV8xNDQ1eC5q/cGc_dj0xNjczNDM0/MTEx",
+        "https://imgs.search.brave.com/p1ejOcCpnX9EbsPDSHgSzrtNCGSBogW_hRBZqYDqDxo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/OTFRRHd6WE9IMEwu/anBn",
+        "https://imgs.search.brave.com/-6alfGiZzf7O35XGCHb6VBy3O36bFL6-q6NNJL_pyBM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kZW1v/bnNiZWhpbmRtZS5j/b20vY2RuL3Nob3Av/ZmlsZXMvODkxMTFF/NDItODlFOC00N0Q5/LThFNzgtRjhCQTYx/OTNDMjk0XzUzM3gu/anBnP3Y9MTczNDM4/MzA1NA"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Maroon",
+          "White",
+          "Black"
+        ]
+      },
+      "rating": 3,
+      "reviews": [
+        {
+          "name": "Sunny",
+          "rating": 3,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Sahil",
+          "rating": 3,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Raj",
+          "rating": 3,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Manish",
+          "rating": 3,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Slim Fit Denim Jeans",
+      "category": "Jeans",
+      "price": 1430,
+      "images": [
+        "https://imgs.search.brave.com/N-Rsr8lRPzDWEhR20p6uvW2dhOJ1lso_KEJs5UOj6YE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFqeE5WTURkbUwu/anBn",
+        "https://imgs.search.brave.com/VnvS3X1V0P1ESk6xDfwAYMIlXtIInJOnLpw2JgRz0dA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFha0JST1MrTUwu/anBn",
+        "https://imgs.search.brave.com/ZJ6_Z2zPMwV3Krb6AN2q2IYa_uA6rFDRs3aCzZWzAFA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibGFj/a2JlcnJ5cy5jb20v/Y2RuL3Nob3AvZmls/ZXMvVWx0cmFzb2Z0/X1NsaW1fQ29tZm9y/dF9CdWZmX0ZpdF9C/bGFja19KZWFuc19C/ZXRzeS1FRDAwMzEx/OVoxLWltYWdlMS5q/cGc_dj0xNzM1MjEy/MDA3JndpZHRoPTE2/MDA",
+        "https://imgs.search.brave.com/gfvW7e9SESoq2wCvqG16ZVitIWkungXGPPOGgIw0ZAc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/am9lc2plYW5zLmNv/bS9jZG4vc2hvcC9m/aWxlcy9iZDkwMDUy/ZC0xODIzLTQ1NWMt/YmY1NS00NTlmOTY5/MGZjOTdfNjAweC5q/cGc_dj0xNzM2Mjg0/Mjcz"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "XL"
+        ],
+        "colors": [
+          "Maroon",
+          "Navy Blue",
+          "Black",
+          "White"
+        ]
+      },
+      "rating": 3.2,
+      "reviews": [
+        {
+          "name": "Neeraj",
+          "rating": 3,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Sahil",
+          "rating": 3,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Aman",
+          "rating": 3,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Sunny",
+          "rating": 4,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Regular Fit Blue Jeans",
+      "category": "Jeans",
+      "price": 1524,
+      "images": [
+        "https://imgs.search.brave.com/gwB1YrRC7ZsAb-0oCDB_TbcrB1J6YbxEs3SE_0uSBTw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFzcWkwcXNybEwu/anBn",
+        "https://imgs.search.brave.com/kz3S6H6e1zioR5Khi5GCq-ZUZr2gLNmPNdbcHGOOmZM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tbm1s/LmxhL2Nkbi9zaG9w/L2ZpbGVzL1NsaW0t/RGVuaW0tQmxhY2st/Mi5qcGc_dj0xNzQz/NzgxNTMwJndpZHRo/PTQzMA"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "White",
+          "Black"
+        ]
+      },
+      "rating": 4.5,
+      "reviews": [
+        {
+          "name": "Tarun",
+          "rating": 5,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        },
+        {
+          "name": "Arjun",
+          "rating": 4,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Neeraj",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Manish",
+          "rating": 4,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Distressed Urban Jeans",
+      "category": "Jeans",
+      "price": 802,
+      "images": [
+        "https://imgs.search.brave.com/km0Vc93UBoWRG6C32046D_LluMPbJGgQVJMu8B_XRa0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5obS5jb20vYXNz/ZXRzL2htLzM0LzM3/LzM0MzcwNWYyOTBm/NjEyMmUxNjQwZGFl/MTExMTQ3NTM2Yjhj/YzZlMTMuanBnP2lt/d2lkdGg9MTUzNg",
+        "https://imgs.search.brave.com/I7SGY5ZQQDxY1lk1NG7fClsxX2amxkxiQi-AsXgbhWE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vVmlj/dG9yaW91cy1NZW4t/cy1Ta2lubnktRml0/LUNvbG9yLVN0cmV0/Y2gtSmVhbnMtU2l6/ZXMtdXAtdG8tNDJX/X2JhZWJkZWI4LTQ3/ZDYtNGM3ZC1iZDQ0/LTM5MzcyZGEyMjRl/Zi44ZmJmZmM0YjM2/NThmNGQxYzhlNmZj/OTQ2ZDIyOTJmOS5q/cGVnP29kbkhlaWdo/dD01ODAmb2RuV2lk/dGg9NTgwJm9kbkJn/PUZGRkZGRg"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "XXL"
+        ],
+        "colors": [
+          "Grey",
+          "Maroon"
+        ]
+      },
+      "rating": 4.2,
+      "reviews": [
+        {
+          "name": "Tarun",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Ritesh",
+          "rating": 4,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Deepak",
+          "rating": 5,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Karan",
+          "rating": 3,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Black Skinny Jeans",
+      "category": "Jeans",
+      "price": 1684,
+      "images": [
+        "https://imgs.search.brave.com/sA-AInzZliWeBJvIvf5T3hA8rb83-mvhNKsxuM3PDlg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjExVWo0SW9mQ0wu/anBn",
+        "https://imgs.search.brave.com/8LRpbE9VyUTlgYeBmJyBWGXRrk7i4aSVChZaLL81rkA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vVmlj/dG9yaW91cy1NZW4t/cy1TdXBlci1Ta2lu/bnktRml0LVN0cmV0/Y2gtRGVuaW0tSmVh/bnMtREwxMDAwLUJs/YWNrLTM0LTMwXzI4/MGE3Zjc0LTY4ZTEt/NDE2OS05NWViLTZi/MmIwMjVlZjk3Ny5m/MzMwYmVmODYyZDUx/NjU3ZDBkZjhiYzQ4/YzIxNWYzYi5qcGVn/P29kbkhlaWdodD01/ODAmb2RuV2lkdGg9/NTgwJm9kbkJnPUZG/RkZGRg"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "M",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Navy Blue",
+          "Black"
+        ]
+      },
+      "rating": 4,
+      "reviews": [
+        {
+          "name": "Sunny",
+          "rating": 5,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Karan",
+          "rating": 4,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Deepak",
+          "rating": 3,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Tapered Fit Stretch Jeans",
+      "category": "Jeans",
+      "price": 1634,
+      "images": [
+        "https://imgs.search.brave.com/Vt-7mLPoefb_kns7uh6muaY5fAMk1ciAVXJSElc4cXg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjE3TEJxLVlkYUwu/anBn",
+        "https://imgs.search.brave.com/lZNRBr4B0Q1baK5Im-AnQGOtplXGsm1ynj56awdmcXY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWlzaG1hc2hqZWFu/cy5jb20vY2RuL3No/b3AvZmlsZXMvYnVy/Z3VuZHlfMzAweC5q/cGc_dj0xNjk2NTg0/NTA0",
+        "https://imgs.search.brave.com/ONKrDPw_aLj0Fg5k6kCA_xfwZmPqVD6zcxY_bGrgbdg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vTGVl/LU1lbi1zLVN0cmFp/Z2h0LVRhcGVyZWQt/RGVuaW0tSmVhbl81/ZDFiNDhmOS0zNTA2/LTQ3MjEtOWNkNC1i/YTRhNzBiMDVmNzMu/ZWU0ZGU3ZjJjNTQ2/YzYyMTM5MzRjNmVj/N2Q5N2VmMjYuanBl/Zz9vZG5IZWlnaHQ9/NTgwJm9kbldpZHRo/PTU4MCZvZG5CZz1G/RkZGRkY"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Grey",
+          "Maroon",
+          "Navy Blue"
+        ]
+      },
+      "rating": 3.8,
+      "reviews": [
+        {
+          "name": "Aman",
+          "rating": 5,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Deepak",
+          "rating": 4,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Raj",
+          "rating": 3,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Tarun",
+          "rating": 3,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Fleece Zip Sweatshirt",
+      "category": "Sweatshirts",
+      "price": 1394,
+      "images": [
+        "https://imgs.search.brave.com/14LCMj_F9FDa743pXICmMJLKR-WXVhRieyGRgZxkBR4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVz/aGNsZWFudGVlcy5j/b20vY2RuL3Nob3Av/ZmlsZXMvQmxhY2st/emlwLXVwLWhvb2Rp/ZS1Nb2RlbC1Gcm9u/dC1aaXBwZWRfNDUw/eDYwMC5qcGc_dj0x/NzI3OTk1MzQ0",
+        "https://imgs.search.brave.com/2e39QOnCRQeJvwd4f4M1jSDNBtt_qRVDdQHD0WtyLAI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFyK3lFOHBMN0wu/anBn",
+        "https://imgs.search.brave.com/JqwxPkNF73_tEjdcAzZdB2YL-NwpKhCNxqdouKQ1LYg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFUWXFJaDZ4aEwu/anBn"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "colors": [
+          "Black",
+          "Maroon",
+          "Navy Blue"
+        ]
+      },
+      "rating": 4.8,
+      "reviews": [
+        {
+          "name": "Raj",
+          "rating": 5,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        },
+        {
+          "name": "Sunny",
+          "rating": 4,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        },
+        {
+          "name": "Ravi",
+          "rating": 5,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Manish",
+          "rating": 5,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Pullover Hoodie Sweatshirt",
+      "category": "Sweatshirts",
+      "price": 1622,
+      "images": [
+        "https://imgs.search.brave.com/Opt5BuZOmwpkomsE0ikmI4JJhLt0zsYyBRMnEu1C7q4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFqY1liUVV0Wkwu/anBn",
+        "https://imgs.search.brave.com/yPI4M5jGiVctXsbUKUR7nYZr_JTDylaYfiLXxYacMac/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5obS5jb20vYXNz/ZXRzL2htL2Q1LzIy/L2Q1MjIyYjBjMjQ2/MTQyZWJkYzM3NmIz/NTU4NzEwMGU4Zjdh/YzIzZDQuanBnP2lt/d2lkdGg9MTUzNg",
+        "https://imgs.search.brave.com/DneGpGWyut2HVr7ymWqYqkqJfIrx8KLSjOgPTNv-TeU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF6US02UHhtVEwu/anBn"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "White",
+          "Grey",
+          "Navy Blue"
+        ]
+      },
+      "rating": 3.8,
+      "reviews": [
+        {
+          "name": "Raj",
+          "rating": 3,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        },
+        {
+          "name": "Sahil",
+          "rating": 3,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Neeraj",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Arjun",
+          "rating": 4,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Crew Neck Basic Sweatshirt",
+      "category": "Sweatshirts",
+      "price": 1402,
+      "images": [
+        "https://imgs.search.brave.com/wM-BhHvoMKIFYO6TXbKBM3q8SnYZzaFw3e-B3ifQZho/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2hpcnRzcGFj/ZS5jb20vY2VsbC9F/U2ZZcitqN202UDlz/U3ZNa1UzZHl3PT0v/OTgzMzAvMTczNS1j/b21mb3J0LWNvbG9y/cy0xNTY2LXJpbmct/c3B1bi1jcmV3bmVj/ay1zd2VhdHNoaXJ0/LWZyb250LXdoaXRl/LmpwZw",
+        "https://imgs.search.brave.com/YiQ4qv9pKQ0-wbc78giNEtN5_FxcojpseDNTcqioWtU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZW1i/ZXJzb25seS5jb20v/Y2RuL3Nob3AvZmls/ZXMvTUgyOTEwMi1C/TEFDSy0xX2I2OTUz/OTNhLTljOWEtNDZk/MS1hYmY4LWUxODE5/ZGJhYzEyMy53ZWJw/P3Y9MTc0NDIxNjQy/MSZ3aWR0aD0zMDAw"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "White",
+          "Black"
+        ]
+      },
+      "rating": 3.5,
+      "reviews": [
+        {
+          "name": "Aman",
+          "rating": 3,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Ravi",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Karan",
+          "rating": 4,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Neeraj",
+          "rating": 3,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Athletic Fit Sweatshirt",
+      "category": "Sweatshirts",
+      "price": 1471,
+      "images": [
+        "https://imgs.search.brave.com/6C2Ro8Wm5kTk8JG94AXXJG-uUk9l1XsS4gpgCNr1VdM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2FwLmNvbS93ZWJj/b250ZW50LzAwNTYv/NDU2LzIyNS9jbjU2/NDU2MjI1LmpwZw",
+        "https://imgs.search.brave.com/61k5Xpsk0M3cVDs7nIT0U9Vw7mIMjKfBivlHulP8A6c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTE1K0ZZUG4yVkwu/anBn"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Grey",
+          "Black"
+        ]
+      },
+      "rating": 3.5,
+      "reviews": [
+        {
+          "name": "Sahil",
+          "rating": 3,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        },
+        {
+          "name": "Deepak",
+          "rating": 4,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Neeraj",
+          "rating": 3,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Raj",
+          "rating": 4,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Printed Graphic Sweatshirt",
+      "category": "Sweatshirts",
+      "price": 1021,
+      "images": [
+        "https://imgs.search.brave.com/P2XX7nZE2V_1sypTyCwNY5nDm13aiUbvjvmsAy3UIS8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mYXN0/Y29sb3JzLmluL2Nk/bi9zaG9wL2ZpbGVz/L1ByaW50ZWRfaG9v/ZGllc19mb3JfbWVu/X01hcm9vbi1CQUNL/LmpwZz92PTE3MzMz/OTc5Njcmd2lkdGg9/NzA0",
+        "https://imgs.search.brave.com/WXUZm-oT1_qfr7aMwhN_HF2X6nX_0Z-ZUjiaaVNmqFU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vTWVu/LXMtRmxlZWNlLVB1/bGxvdmVyLUhvb2Rp/ZS1Mb29zZS1GaXQt/VWx0cmEtU29mdC1I/b29kZWQtU3dlYXRz/aGlydC1XaXRoLVBv/Y2tldHMtWFgtTGFy/Z2UtTmF2eS1CbHVl/XzMzYzA2OTJlLTEz/ZDAtNDI0NS1iNDBh/LWUxYmExMjE4MmU2/ZS41NmNlNDY4ZjE2/YzE5NjkxMGQ4ZjZm/MzhhZWEwZTAwNy5q/cGVnP29kbkhlaWdo/dD01ODAmb2RuV2lk/dGg9NTgwJm9kbkJn/PUZGRkZGRg"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "colors": [
+          "Maroon",
+          "Navy Blue"
+        ]
+      },
+      "rating": 3.5,
+      "reviews": [
+        {
+          "name": "Tarun",
+          "rating": 4,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Ritesh",
+          "rating": 3,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        },
+        {
+          "name": "Deepak",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Sahil",
+          "rating": 3,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Formal Slim Trousers",
+      "category": "Trousers",
+      "price": 834,
+      "images": [
+        "https://imgs.search.brave.com/gYSW6u0sxCGPWOOz4weZiZCfUFxTAQcj-5rs2B3RiiM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTF4cjZhTU43RUwu/anBn",
+        "https://imgs.search.brave.com/KeizgriW-VvKgN7QvhGCo4UpZeYADNA0bzfcnuUvv2U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFuNzlnZjdrNkwu/anBn"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Grey",
+          "Maroon"
+        ]
+      },
+      "rating": 3.7,
+      "reviews": [
+        {
+          "name": "Tarun",
+          "rating": 4,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Sahil",
+          "rating": 4,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        },
+        {
+          "name": "Arjun",
+          "rating": 3,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Stretch Formal Trousers",
+      "category": "Trousers",
+      "price": 554,
+      "images": [
+        "https://imgs.search.brave.com/Q3b_qScWPv5fpi5XWQvJnFzfHtGjN7NsrIHDntKe4ZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHVuZWthcmNvdHRv/bi5jb20vY2RuL3No/b3AvcHJvZHVjdHMv/bWFyb29uLWNvbG9y/LWZvcm1hbC1jb3R0/b24tcGFudC1mb3It/bWVuLTM4NTI2OC5q/cGc_dj0xNzAyMTcy/MjgyJndpZHRoPTM4/NDA",
+        "https://imgs.search.brave.com/nmUjNbKHWE5f05t61KUEiIzQ-2Z-u5_ANQVYHZwLB5w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFXcS1mZ3RibUwu/anBn"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Maroon",
+          "Navy Blue"
+        ]
+      },
+      "rating": 4,
+      "reviews": [
+        {
+          "name": "Arjun",
+          "rating": 4,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Deepak",
+          "rating": 4,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Ritesh",
+          "rating": 3,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Ravi",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Casual Chino Trousers",
+      "category": "Trousers",
+      "price": 1633,
+      "images": [
+        "https://imgs.search.brave.com/Zj0v-ITbatGrhSLDR_fu8iUyK5NlOrwKyUtoJKxzK9s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ib25v/Ym9zLXByb2QtczMu/aW1naXgubmV0L3By/b2R1Y3RzLzI5MTAx/Ny9vcmlnaW5hbC9Q/QU5UX0NISU5PLVBB/TlRfQlBUMTA2MjlT/MDAwMUJfM19jYXRl/Z29yeS5qcGc_MTY2/ODc0NTA4OT0mYXV0/bz1jb21wcmVzcyxm/b3JtYXQmZml0PWNs/aXAmY3M9c3JnYiZ3/PTE5MjAmZm09cGpw/Zw",
+        "https://imgs.search.brave.com/ty4kB1Wkf8cEBaTwEI8LSxK91dunnmmieMgj51ly8Jk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ib25v/Ym9zLXByb2QtczMu/aW1naXgubmV0L3By/b2R1Y3RzLzM0MjE5/NS9vcmlnaW5hbC9Q/QU5UX0NISU5PLVBB/TlRfQlBUMTA2MjlT/MTA1MkdfM19jYXRl/Z29yeS5qcGc_MTcx/NjQwNzczNT0mYXV0/bz1jb21wcmVzcyxm/b3JtYXQmZml0PWNs/aXAmY3M9c3JnYiZ3/PTE5MjAmZm09cGpw/Zw"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Navy Blue",
+          "Grey"
+        ]
+      },
+      "rating": 4.8,
+      "reviews": [
+        {
+          "name": "Arjun",
+          "rating": 5,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Manish",
+          "rating": 5,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Tarun",
+          "rating": 5,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Aman",
+          "rating": 4,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Flat Front Office Trousers",
+      "category": "Trousers",
+      "price": 501,
+      "images": [
+        "https://imgs.search.brave.com/1B_4Fhp8oDI98fkr6H2lGwDMgs8g4nW0bJC5ql77sa8/rs:fit:860:0:0:0/g:ce/aHR0cDovL2Jyb29r/c2Jyb3RoZXJzLmJ5/bmRlci5jb20vbWF0/Y2gvV2ViTmFtZS9N/SzAxMzExX0dSRVkv/QlJPT0tTX0JST1RI/RVJTX1M",
+        "https://imgs.search.brave.com/mOVKh4Hnyl9n3JMQSFfvUTygTNPjF-VV53JcglftXDA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXNjZG4ubG91aXNw/aGlsaXBwZS5jb20v/aW1nL2FwcC9wcm9k/dWN0LzMvMzk2Mjg5/MzctMTMwMDU5MTku/anBnP2F1dG89Zm9y/bWF0Jnc9Mzkw"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "L",
+          "XXL"
+        ],
+        "colors": [
+          "Grey",
+          "White"
+        ]
+      },
+      "rating": 4.3,
+      "reviews": [
+        {
+          "name": "Tarun",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Sunny",
+          "rating": 5,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Manish",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Wrinkle-Free Trousers",
+      "category": "Trousers",
+      "price": 1645,
+      "images": [
+        "https://imgs.search.brave.com/ZNLP-gb_Q3QwGD_RTE5uOeH5tKb-DTY-beSw0igbn54/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL3ZhZGVyLXBy/b2QuczMuYW1hem9u/YXdzLmNvbS8xNjkz/OTIzODc3LTE2Njg2/MDk2NDktNjMtMTY2/ODYwOTM4My5qcGc_/Y3JvcD0xeHc6MS4w/MHhoO2NlbnRlcix0/b3AmcmVzaXplPTk4/MDoq",
+        "https://imgs.search.brave.com/XqySHzGbSLeklKBEK2z4fwOCsMYWShvhiBBWPXXp1iQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YXJpc3RvYnJhdC5p/bi9jZG4vc2hvcC9w/cm9kdWN0cy9FbGl0/ZVRyb3VzZXJfSWNl/R3JleV80LmpwZz92/PTE2Nzc1NTg4NjIm/d2lkdGg9MTA4MA"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "Grey"
+        ]
+      },
+      "rating": 3.8,
+      "reviews": [
+        {
+          "name": "Ritesh",
+          "rating": 3,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Karan",
+          "rating": 3,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        },
+        {
+          "name": "Sunny",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Aman",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Distressed Urban Jeans Special 1",
+      "category": "Jeans",
+      "price": 507,
+      "images": [
+        "https://imgs.search.brave.com/hj8VGyKG-JIslfrKkcGU44kgesKkEP4k2R_lIwh9OO0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vVmlj/dG9yaW91cy1NZW4t/cy1TdXBlci1Ta2lu/bnktRml0LUNvbG9y/ZWQtSmVhbnMtREwx/MDAxV00tU1VQRVIt/R3JheS00MC0zMF9k/NDU4ODAwZC1mMDNh/LTRhMGMtYjRlYS01/MGZiYTlmOTQ3OGQu/M2FjNjU0ODRkM2Jl/NmU4MDNjNWQ3NTMz/OThiNDVhZTMuanBl/Zz9vZG5IZWlnaHQ9/Nzg0Jm9kbldpZHRo/PTU4MCZvZG5CZz1G/RkZGRkY",
+        "https://imgs.search.brave.com/-mtw3ijuCQMGTtVLEAGa0GdNE_ikhOI0G1uozksil8A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tbm1s/LmxhL2Nkbi9zaG9w/L3Byb2R1Y3RzL0Iy/NDMtRmxhcmUtRGVu/aW0tQmxhY2stMi5q/cGc_dj0xNzQzNzU4/NzI0JndpZHRoPTQz/MA"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "XXL"
+        ],
+        "colors": [
+          "Grey",
+          "Black"
+        ]
+      },
+      "rating": 3.3,
+      "reviews": [
+        {
+          "name": "Karan",
+          "rating": 3,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Arjun",
+          "rating": 3,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Aman",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Black Skinny Jeans Special 2",
+      "category": "Jeans",
+      "price": 879,
+      "images": [
+        "https://imgs.search.brave.com/KeizgriW-VvKgN7QvhGCo4UpZeYADNA0bzfcnuUvv2U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFuNzlnZjdrNkwu/anBn",
+        "https://imgs.search.brave.com/B-JWjWHJMxGK41Mpg9_VFTBf1OgskMaGWMzd9Ht8NrA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9vbGRu/YXZ5LmNvbS5waC9j/ZG4vc2hvcC9wcm9k/dWN0cy9jbjUyNTQx/OTYxXzE2MDB4Lmpw/Zz92PTE2NzQ0NTE4/NjI"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "L"
+        ],
+        "colors": [
+          "Maroon",
+          "Navy Blue"
+        ]
+      },
+      "rating": 4.5,
+      "reviews": [
+        {
+          "name": "Karan",
+          "rating": 5,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Sunny",
+          "rating": 5,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Sahil",
+          "rating": 4,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Raj",
+          "rating": 4,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Casual Chino Trousers Special 3",
+      "category": "Trousers",
+      "price": 1022,
+      "images": [
+        "https://imgs.search.brave.com/c7UiStxLtGeAUHHXTPALDZt08WFayWup0JW1bH39y0A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ib25v/Ym9zLXByb2QtczMu/aW1naXgubmV0L3By/b2R1Y3RzLzM1MTEx/Ny9vcmlnaW5hbC9Q/QU5UX0NISU5PLVBB/TlRfQlBUMTA2MjlT/MTU5MkJfM19jYXRl/Z29yeS5qcGc_MTcz/Mzg0OTM5NT0mYXV0/bz1jb21wcmVzcyxm/b3JtYXQmZml0PWNs/aXAmY3M9c3JnYiZ3/PTE5MjAmZm09cGpw/Zw",
+        "https://imgs.search.brave.com/3x6T3fRt2GZhRv6RKgEFV3pyX6q4vaA1uSq3wpV2Tds/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vVmlj/dG9yaW91cy1NZW4t/cy1CYXNpYy1DYXN1/YWwtU2xpbS1GaXQt/U3RyZXRjaC1DaGlu/by1QYW50cy1ETDEy/NTAtV2hpdGUtMzIt/MzBfODVlMjBjZWYt/Y2NhNi00NTA4LTg4/ODktYmJhM2FhYTU4/NDQ3LjNjZDZkNmM3/Y2U2MzRmYTE5ZGQ2/MzI4OWRmYTBhM2Ri/LmpwZWc_b2RuSGVp/Z2h0PTc4NCZvZG5X/aWR0aD01ODAmb2Ru/Qmc9RkZGRkZG"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "colors": [
+          "Maroon",
+          "White"
+        ]
+      },
+      "rating": 3.7,
+      "reviews": [
+        {
+          "name": "Manish",
+          "rating": 3,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Sahil",
+          "rating": 3,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Ritesh",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Flannel Warm Shirt Special 4",
+      "category": "Shirts",
+      "price": 1689,
+      "images": [
+        "https://imgs.search.brave.com/BvO42hQGelgwbHy-G-AP77KuDWMiRKMPdKxHh2URI6s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dW50dWNraXQuY29t/L2Nkbi9zaG9wL2Zp/bGVzL0JBUlJFTFNU/T05FLVVOVFVDS0lU/LTQwNzEzRHJlLUZM/QU5ORUwtQ0hFQ0st/TUFST09OLTIuanBn/P2hlaWdodD0xMDAw/JnY9MTY5NzczMjMz/NQ",
+        "https://imgs.search.brave.com/qgsCvnuzgnCwI1abFcMKEvhwytCpX3uXmr7YQ2Yenls/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFpbklzYTNjNkwu/anBn"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Maroon",
+          "Black"
+        ]
+      },
+      "rating": 4,
+      "reviews": [
+        {
+          "name": "Arjun",
+          "rating": 3,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Neeraj",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Sunny",
+          "rating": 5,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        },
+        {
+          "name": "Deepak",
+          "rating": 3,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Checked Casual Shirt Special 5",
+      "category": "Shirts",
+      "price": 1119,
+      "images": [
+        "https://imgs.search.brave.com/t3QSs26JQ-d8ysDCu52dqIeKeNuhM_OQw7GSJy3sxQI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b2tlYXN5bGlmZS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTkvMDQvUFJJTlRF/RC1XSElURS1DQVNV/QUwtU0hJUlQuanBn",
+        "https://imgs.search.brave.com/Ck1XYvsQXjrYQx_qbHNX-zlYQV1UgQvRTqG43UWnv0I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/OTFrclJyTmV3Wkwu/anBn"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "White",
+          "Black"
+        ]
+      },
+      "rating": 4.3,
+      "reviews": [
+        {
+          "name": "Sunny",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Tarun",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Deepak",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Linen Summer Shirt Special 6",
+      "category": "Shirts",
+      "price": 1560,
+      "images": [
+        "https://imgs.search.brave.com/fM9Mg3s03AqAzxx1vdoXFyrCIA88Bn-PZqeYARi6e7I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFHb3dLOGpXSkwu/anBn",
+        "https://imgs.search.brave.com/VX6tQMoav4kSH4u9jkFNa6apQYUVngHULmFVrU14YdM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cy5z/dW5zcGVsLmNvbS9j/ZG4vc2hvcC9maWxl/cy9tamFjNzE4Ni1i/cmdhLTFfYmYwYjE1/ODMtN2IyYi00ZWYx/LTk5MDgtMGJiYmJk/NzkxN2VjLmpwZz92/PTE3NDU1OTk1NDcm/d2lkdGg9MTEwMA",
+        "https://imgs.search.brave.com/Rx_X29LlfU_KyC6hAXfPpsSOYGUWafG-QD2nYzNvR_Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb3Zl/YnJhbmQuY29tL2Nk/bi9zaG9wL2ZpbGVz/L05hdnlfQmx1ZV9N/YW5qYWNrX21lbnNf/TGluZW5fU2hpcnRf/Y29sbGFyLmpwZz9j/cm9wPWNlbnRlciZo/ZWlnaHQ9MTYwMCZ2/PTE3NDQyOTQyNDUm/d2lkdGg9MTIwMA"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Maroon",
+          "Grey",
+          "Navy Blue"
+        ]
+      },
+      "rating": 4.5,
+      "reviews": [
+        {
+          "name": "Ravi",
+          "rating": 5,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        },
+        {
+          "name": "Manish",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Arjun",
+          "rating": 5,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Sunny",
+          "rating": 3,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Casual Chino Trousers Special 7",
+      "category": "Trousers",
+      "price": 1103,
+      "images": [
+        "https://imgs.search.brave.com/r8T-4bq3TclGwRYV1uSBLcnu2pKHRAmxX5j1uCW3CLE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ib25v/Ym9zLXByb2QtczMu/aW1naXgubmV0L3By/b2R1Y3RzLzM2MjQ0/Ni9vcmlnaW5hbC9Q/QU5UX0NISU5PLVBB/TlRfQlBUMTA2MjlT/MTc0NUdfM19jYXRl/Z29yeS5qcGc_MTc0/NTU5NTA3ND0mYXV0/bz1jb21wcmVzcyxm/b3JtYXQmZml0PWNs/aXAmY3M9c3JnYiZ3/PTE5MjAmZm09cGpw/Zw",
+        "https://imgs.search.brave.com/JE9lSXJWTdgV1R6_niKzDz0zENGHIn4Gc0M-YJNWsts/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YmV5b3VuZy5pbi9h/cGkvY2FjaGUvY2F0/YWxvZy9wcm9kdWN0/cy9uZXdfY2hpbm9z/X3VwZGF0ZV9pbWFn/ZV8yM185XzIwMjIv/b2ZmX3doaXRlX21l/bnNfY2hpbm9fcGFu/dHNfc2lkZV92aWV3/MTJfNDAweDUzMy5q/cGc"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "colors": [
+          "Maroon",
+          "White"
+        ]
+      },
+      "rating": 4,
+      "reviews": [
+        {
+          "name": "Karan",
+          "rating": 3,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Raj",
+          "rating": 5,
+          "comment": "The stitching is neat, and it feels durable. Perfect for casual outings or lounging at home."
+        },
+        {
+          "name": "Manish",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "V-Neck Soft Tee Special 8",
+      "category": "T-shirts",
+      "price": 1228,
+      "images": [
+        "https://imgs.search.brave.com/YkRVa0qG573dRIwpdJLUTVeFnA8WyGIcsdh8iQUsb-0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVz/aGNsZWFudGVlcy5j/b20vY2RuL3Nob3Av/ZmlsZXMvYWM3MzJh/MThmMWE3YTczNjU2/M2VjYjU2MmI0ODNk/YTk5MzUxNGMyNi0x/NTAweDIwMDBfNzM3/eDk4MC5qcGc_dj0x/NzE1MTAwNzc2",
+        "https://imgs.search.brave.com/0oK4HxoZemxHoqwFTFBe5tzIRVV1Ui6MC4VdokVp_wY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5obS5jb20vYXNz/ZXRzL2htLzQ5LzU4/LzQ5NThjNGYzM2Fh/YzkyZGI0YWM0MWQy/NDI0YTQzYTgxYWY3/Mzk2ZGYuanBnP2lt/d2lkdGg9MjE2MA"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Grey",
+          "Black"
+        ]
+      },
+      "rating": 3.8,
+      "reviews": [
+        {
+          "name": "Deepak",
+          "rating": 3,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Raj",
+          "rating": 5,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Arjun",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Manish",
+          "rating": 3,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Tapered Fit Stretch Jeans Special 9",
+      "category": "Jeans",
+      "price": 1145,
+      "images": [
+        "https://imgs.search.brave.com/CU2rLeZc1zoIGLd3UIK1neq0_3vlWb7v4OOW35-Zybk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS52ZXJ5LmNvLnVr/L2kvdmVyeS9WV0tQ/Nl9TUTFfMDAwMDAw/MDAwNF9CTEFDS19N/RGY_Zm10PWF1dG8",
+        "https://imgs.search.brave.com/CjeYf_qBeMU8bQEmzJYkVLRKz1MiNKkuSSGqdAzBn_g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFSRVRRdzErV0wu/anBn"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "Grey"
+        ]
+      },
+      "rating": 4,
+      "reviews": [
+        {
+          "name": "Sunny",
+          "rating": 4,
+          "comment": "Color is exactly as shown. Great value for money. Would definitely buy again."
+        },
+        {
+          "name": "Manish",
+          "rating": 5,
+          "comment": "Stylish and good quality. I\u2019ve washed it a couple of times and it still looks new."
+        },
+        {
+          "name": "Neeraj",
+          "rating": 3,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Checked Casual Shirt Special 10",
+      "category": "Shirts",
+      "price": 1304,
+      "images": [
+        "https://imgs.search.brave.com/N-f22k8lXSLBXM-bvmRWAZWHHY2HfxCfrXSWqJpK6aQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFkSWlKdXZiRUwu/anBn",
+        "https://imgs.search.brave.com/8Hu0MpyyNmjL7dEOJd0rlsPt_nnw4-orA3wYnt0dLkE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zcHlr/YXIuY29tL2Nkbi9z/aG9wL3Byb2R1Y3Rz/L2E3OFJpNUp0WGgt/ODkwNzk2Njg2ODU1/N18xLndlYnA_dj0x/NzQzMDc2ODQ5"
+      ],
+      "description": "This premium piece of apparel is crafted from the finest quality materials, offering a superior wearing experience. It features a modern yet classic design that complements a variety of styles and occasions. Designed to provide unmatched comfort, breathability, and durability, it's an ideal choice for both daily wear and casual outings. The stitching is reinforced for long-lasting use, and the fit is tailored to offer maximum mobility without compromising on style. Whether paired with jeans for a relaxed look or trousers for a smart-casual appeal, this versatile item enhances your wardrobe effortlessly. Available in a variety of colors and sizes, it caters to every individual's taste and fit preferences.",
+      "variants": {
+        "sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Grey",
+          "Black"
+        ]
+      },
+      "rating": 4,
+      "reviews": [
+        {
+          "name": "Karan",
+          "rating": 5,
+          "comment": "Looks premium and fits as expected. Material doesn\u2019t shrink after wash."
+        },
+        {
+          "name": "Ritesh",
+          "rating": 4,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Manish",
+          "rating": 3,
+          "comment": "Comfortable for daily wear and the color is vibrant. Received compliments wearing it!"
+        },
+        {
+          "name": "Tarun",
+          "rating": 4,
+          "comment": "Very comfortable and fits perfectly. The fabric is soft and feels great on the skin."
+        }
+      ]
+    }
+  ],
+  "total": 35,
+  "categories": [
+    "T-shirts",
+    "Shirts",
+    "Jeans",
+    "Sweatshirts",
+    "Trousers"
+  ]
+}
