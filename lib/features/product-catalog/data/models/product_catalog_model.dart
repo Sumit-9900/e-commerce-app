@@ -60,13 +60,15 @@ class ProductCatalogModel {
   factory ProductCatalogModel.fromMap(Map<String, dynamic> map) {
     return ProductCatalogModel(
       products: List<ProductModel>.from(
-        (map['products'] as List<int>).map<ProductModel>(
+        (map['products'] as List<dynamic>).map<ProductModel>(
           (x) => ProductModel.fromMap(x as Map<String, dynamic>),
         ),
       ),
-      total: map['total'] as int,
+      total: map['total'] ?? 0,
       categories: List<c.Category>.from(
-        map["categories"].map((x) => categoryValues.map[x]!),
+        map["categories"].map(
+          (x) => categoryValues.map[x]!,
+        ),
       ),
     );
   }

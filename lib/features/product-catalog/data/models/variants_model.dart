@@ -26,6 +26,7 @@ class VariantsModel {
       map['sizes'].map(
         (x) => Size.values.firstWhere(
           (e) => e.name.toLowerCase() == x.toLowerCase(),
+          orElse: () => Size.M,
         ),
       ),
     ),
@@ -33,8 +34,12 @@ class VariantsModel {
       map['colors'].map(
         (x) => Color.values.firstWhere(
           (e) => e.name.toLowerCase() == x.toLowerCase(),
+          orElse: () => Color.BLACK,
         ),
       ),
     ),
   );
+
+  @override
+  String toString() => 'VariantsModel(sizes: $sizes, colors: $colors)';
 }

@@ -29,8 +29,12 @@ class ReviewModel {
   };
 
   factory ReviewModel.fromMap(Map<String, dynamic> map) => ReviewModel(
-    name: map['name'],
-    rating: map['rating'],
-    comment: map['comment'],
+    name: map['name'] ?? '',
+    rating: map['rating'] ?? '',
+    comment: map['comment'] ?? '',
   );
+
+  @override
+  String toString() =>
+      'ReviewModel(name: $name, rating: $rating, comment: $comment)';
 }

@@ -29,7 +29,6 @@ class ProductModel {
     required this.reviews,
   });
 
-  /// Converts this model into a domain entity
   Product toEntity() => Product(
     id: id,
     name: name,
@@ -42,7 +41,6 @@ class ProductModel {
     reviews: reviews.map((e) => e.toEntity()).toList(),
   );
 
-  /// Converts a domain entity back into a model (if needed)
   factory ProductModel.fromEntity(Product product) => ProductModel(
     id: product.id,
     name: product.name,
@@ -68,17 +66,17 @@ class ProductModel {
   };
 
   factory ProductModel.fromMap(Map<String, dynamic> map) => ProductModel(
-    id: map['id'],
-    name: map['name'],
+    id: map['id'] ?? 0,
+    name: map['name'] ?? '',
     category: Category.values.firstWhere(
       (e) => e.name.toLowerCase() == map['category'].toLowerCase(),
       orElse: () => Category.T_SHIRTS,
     ),
-    price: map['price'],
-    images: List<String>.from(map['images']),
-    description: map['description'],
+    price: map['price'] ?? 0,
+    images: List<String>.from(map['images'] ?? ''),
+    description: map['description'] ?? '',
     variants: VariantsModel.fromMap(map['variants']),
-    rating: map['rating'].toDouble(),
+    rating: map['rating'].toDouble() ?? 0.0,
     reviews: List<ReviewModel>.from(
       map['reviews'].map((x) => ReviewModel.fromMap(x)),
     ),
@@ -88,4 +86,9 @@ class ProductModel {
 
   factory ProductModel.fromJson(String source) =>
       ProductModel.fromMap(json.decode(source));
+
+  @override
+  String toString() {
+    return 'ProductModel(id: $id, name: $name, category: $category, price: $price, images: $images, description: $description, variants: $variants, rating: $rating, reviews: $reviews)';
+  }
 }
