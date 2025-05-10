@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:ecommerce_app/core/router/app_router_constants.dart';
 import 'package:ecommerce_app/core/utils/show_snackbar.dart';
 import 'package:ecommerce_app/core/widgets/loader.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/bloc/products_bloc.dart';
@@ -7,6 +10,7 @@ import 'package:ecommerce_app/features/product-catalog/presentation/widgets/sort
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:go_router/go_router.dart';
 
 class ProductCatalogPage extends StatefulWidget {
   const ProductCatalogPage({super.key});
@@ -97,9 +101,22 @@ class _ProductCatalogPageState extends State<ProductCatalogPage> {
                                     (index % 4 == 1 || index % 4 == 2);
                                 final product = products[index];
 
-                                return ProductTile(
-                                  isLarge: isLarge,
-                                  product: product,
+                                log('color: ${product.variants.colors}');
+
+                                return GestureDetector(
+                                  onTap: () {
+                                    context.pushNamed(
+                                      AppRouterConstants.productDetailsRoute,
+                                      pathParameters: {
+                                        'id': product.id.toString(),
+                                      },
+                                      extra: product,
+                                    );
+                                  },
+                                  child: ProductTile(
+                                    isLarge: isLarge,
+                                    product: product,
+                                  ),
                                 );
                               },
                             ),

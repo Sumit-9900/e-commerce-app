@@ -1,6 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ecommerce_app/core/widgets/rating_bar.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/entities/product.dart';
+import 'package:ecommerce_app/features/product-catalog/presentation/widgets/cached_image.dart';
 import 'package:flutter/material.dart';
 
 class ProductTile extends StatelessWidget {
@@ -17,26 +17,9 @@ class ProductTile extends StatelessWidget {
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: CachedNetworkImage(
-                imageUrl: product.images[0],
-                fit: BoxFit.cover,
-                height: isLarge ? 190 : 130,
-                width: double.infinity,
-                placeholder: (context, url) => Container(color: Colors.grey),
-                errorWidget:
-                    (context, url, error) => Container(
-                      color: Colors.grey,
-                      child: Column(
-                        children: [
-                          Icon(Icons.error, color: Colors.red),
-                          const SizedBox(height: 3),
-                          Text('Unable to fetch data!'),
-                        ],
-                      ),
-                    ),
-              ),
+            CachedImage(
+              imageUrl: product.images[0],
+              height: isLarge ? 190 : 130,
             ),
             Padding(
               padding: const EdgeInsets.all(5.0),

@@ -22,22 +22,8 @@ class VariantsModel {
   };
 
   factory VariantsModel.fromMap(Map<String, dynamic> map) => VariantsModel(
-    sizes: List<Size>.from(
-      map['sizes'].map(
-        (x) => Size.values.firstWhere(
-          (e) => e.name.toLowerCase() == x.toLowerCase(),
-          orElse: () => Size.M,
-        ),
-      ),
-    ),
-    colors: List<Color>.from(
-      map['colors'].map(
-        (x) => Color.values.firstWhere(
-          (e) => e.name.toLowerCase() == x.toLowerCase(),
-          orElse: () => Color.BLACK,
-        ),
-      ),
-    ),
+    sizes: List<Size>.from(map['sizes'].map((x) => sizeValues.map[x]!)),
+    colors: List<Color>.from(map['colors'].map((x) => colorValues.map[x]!)),
   );
 
   @override
