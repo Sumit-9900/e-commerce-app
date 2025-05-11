@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class SizeColorQuantityTile extends StatelessWidget {
   final String text;
   final Widget widget;
+  final Color color;
   const SizeColorQuantityTile({
     super.key,
     required this.text,
     required this.widget,
+    this.color = const Color.fromARGB(78, 158, 158, 158),
   });
 
   @override
@@ -14,7 +16,7 @@ class SizeColorQuantityTile extends StatelessWidget {
     return Container(
       height: 60,
       decoration: BoxDecoration(
-        color: const Color.fromARGB(78, 158, 158, 158),
+        color: color,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(
