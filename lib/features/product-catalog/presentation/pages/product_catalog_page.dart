@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
 import 'package:ecommerce_app/core/utils/show_snackbar.dart';
 import 'package:ecommerce_app/core/widgets/loader.dart';
@@ -100,8 +98,6 @@ class _ProductCatalogPageState extends State<ProductCatalogPage> {
                                 final isLarge =
                                     (index % 4 == 1 || index % 4 == 2);
                                 final product = products[index];
-
-                                log('color: ${product.variants.colors}');
 
                                 return GestureDetector(
                                   onTap: () {

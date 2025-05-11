@@ -1,10 +1,11 @@
+import 'package:ecommerce_app/core/utils/bottom_draggable_sheet.dart';
 import 'package:ecommerce_app/core/utils/name_to_color.dart';
 import 'package:ecommerce_app/core/widgets/rating_bar.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/entities/product.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/category.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/widgets/cached_image.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/widgets/review_tile.dart';
-import 'package:ecommerce_app/features/product-catalog/presentation/widgets/size_color_quantity_tile.dart';
+import 'package:ecommerce_app/core/widgets/size_color_quantity_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -68,7 +69,13 @@ class ProductDetailsPage extends StatelessWidget {
                     ),
                     const SizedBox(width: 14),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        bottomDraggableSheet(
+                          context,
+                          headingText: 'Size',
+                          variants: product.variants.sizes,
+                        );
+                      },
                       icon: Icon(Icons.keyboard_arrow_down, size: 35),
                     ),
                   ],
@@ -87,7 +94,13 @@ class ProductDetailsPage extends StatelessWidget {
                     ),
                     const SizedBox(width: 5),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        bottomDraggableSheet(
+                          context,
+                          headingText: 'Color',
+                          variants: product.variants.colors,
+                        );
+                      },
                       icon: Icon(Icons.keyboard_arrow_down, size: 35),
                     ),
                   ],

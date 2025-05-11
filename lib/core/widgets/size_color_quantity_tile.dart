@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 class SizeColorQuantityTile extends StatelessWidget {
   final String text;
   final Widget widget;
-  const SizeColorQuantityTile({super.key, required this.text, required this.widget});
+  const SizeColorQuantityTile({
+    super.key,
+    required this.text,
+    required this.widget,
+  });
 
   @override
   Widget build(BuildContext context) {
