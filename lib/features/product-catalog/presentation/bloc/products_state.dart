@@ -14,5 +14,6 @@ final class ProductsFailure extends ProductsState {
 
 final class ProductsSuccess extends ProductsState {
   final ProductCatalog productCatalog;
-  ProductsSuccess(this.productCatalog);
+  final SortOptions sortOptions;
+  ProductsSuccess(this.productCatalog, {required this.sortOptions});
 }

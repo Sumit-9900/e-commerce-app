@@ -1,14 +1,15 @@
+import 'package:ecommerce_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class SizeColorQuantityTile extends StatelessWidget {
+class CommonTile extends StatelessWidget {
   final String text;
   final Widget widget;
   final Color color;
-  const SizeColorQuantityTile({
+  const CommonTile({
     super.key,
     required this.text,
     required this.widget,
-    this.color = const Color.fromARGB(78, 158, 158, 158),
+    this.color = AppColors.tileColor,
   });
 
   @override

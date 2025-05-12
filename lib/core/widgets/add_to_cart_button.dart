@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AddToCartButton extends StatelessWidget {
@@ -9,7 +10,7 @@ class AddToCartButton extends StatelessWidget {
     return Container(
       height: 60,
       decoration: BoxDecoration(
-        color: Color(0xff8e6cef),
+        color: AppColors.purpleColor,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(

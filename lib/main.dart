@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/core/router/app_router_config.dart';
 import 'package:ecommerce_app/core/theme/app_theme.dart';
+import 'package:ecommerce_app/features/product-catalog/domain/enums/sort_options.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/bloc/products_bloc.dart';
 import 'package:ecommerce_app/init_dependencies.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,10 @@ void main() {
     MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (_) => getIt<ProductsBloc>()..add(ProductsFetched()),
+          create:
+              (_) =>
+                  getIt<ProductsBloc>()
+                    ..add(ProductsFetched(sortOptions: SortOptions.newest)),
         ),
       ],
       child: const MyApp(),

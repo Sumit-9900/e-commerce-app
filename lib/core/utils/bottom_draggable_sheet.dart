@@ -1,5 +1,6 @@
+import 'package:ecommerce_app/core/theme/app_colors.dart';
 import 'package:ecommerce_app/core/utils/name_to_color.dart';
-import 'package:ecommerce_app/core/widgets/size_color_quantity_tile.dart';
+import 'package:ecommerce_app/core/widgets/common_tile.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/cubit/product_details_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/size.dart'
@@ -98,21 +99,17 @@ void bottomDraggableSheet(
                                       c.colorValues.reverse[variant]!;
                                   detailsCubit.changeColor(newColor);
                                 }
+                                Navigator.of(context).pop();
                               },
-                              child: SizeColorQuantityTile(
+                              child: CommonTile(
                                 text: displayText,
                                 widget: trailingWidget,
                                 color:
                                     (state is ProductDetailsSuccess &&
                                             ((state.size == displayText) ||
                                                 (state.color == displayText)))
-                                        ? Color(0xff8e6cef)
-                                        : const Color.fromARGB(
-                                          78,
-                                          158,
-                                          158,
-                                          158,
-                                        ),
+                                        ? AppColors.purpleColor
+                                        : AppColors.tileColor,
                               ),
                             );
                           },

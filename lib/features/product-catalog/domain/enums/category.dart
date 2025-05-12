@@ -1,11 +1,11 @@
 import 'package:ecommerce_app/core/utils/enum_values.dart';
 
-enum Category { JEANS, SHIRTS, SWEATSHIRTS, TROUSERS, T_SHIRTS }
+enum Category { jeans, shirts, sweatShirts, trousers, tShirts }
 
 final categoryValues = EnumValues({
-  "Jeans": Category.JEANS,
-  "Shirts": Category.SHIRTS,
-  "Sweatshirts": Category.SWEATSHIRTS,
-  "Trousers": Category.TROUSERS,
-  "T-shirts": Category.T_SHIRTS,
+  "Jeans": Category.jeans,
+  "Shirts": Category.shirts,
+  "Sweatshirts": Category.sweatShirts,
+  "Trousers": Category.trousers,
+  "T-shirts": Category.tShirts,
 });

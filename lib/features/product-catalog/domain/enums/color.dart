@@ -1,11 +1,11 @@
 import 'package:ecommerce_app/core/utils/enum_values.dart';
 
-enum Color { BLACK, GREY, MAROON, NAVY_BLUE, WHITE }
+enum Color { black, grey, maroon, navyBlue, white }
 
 final colorValues = EnumValues({
-  "Black": Color.BLACK,
-  "Grey": Color.GREY,
-  "Maroon": Color.MAROON,
-  "Navy Blue": Color.NAVY_BLUE,
-  "White": Color.WHITE,
+  "Black": Color.black,
+  "Grey": Color.grey,
+  "Maroon": Color.maroon,
+  "Navy Blue": Color.navyBlue,
+  "White": Color.white,
 });

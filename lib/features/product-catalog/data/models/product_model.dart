@@ -70,7 +70,7 @@ class ProductModel {
     name: map['name'] ?? '',
     category: Category.values.firstWhere(
       (e) => e.name.toLowerCase() == map['category'].toLowerCase(),
-      orElse: () => Category.T_SHIRTS,
+      orElse: () => Category.tShirts,
     ),
     price: map['price'] ?? 0,
     images: List<String>.from(map['images'] ?? ''),

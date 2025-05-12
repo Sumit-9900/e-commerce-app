@@ -8,7 +8,7 @@ import 'package:ecommerce_app/features/product-catalog/domain/enums/color.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/cubit/product_details_cubit.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/widgets/cached_image.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/widgets/review_tile.dart';
-import 'package:ecommerce_app/core/widgets/size_color_quantity_tile.dart';
+import 'package:ecommerce_app/core/widgets/common_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +55,7 @@ class ProductDetailsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  SizeColorQuantityTile(
+                  CommonTile(
                     text: 'Size',
                     widget: Row(
                       children: [
@@ -97,7 +97,7 @@ class ProductDetailsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 14),
-                  SizeColorQuantityTile(
+                  CommonTile(
                     text: 'Color',
                     widget: Row(
                       children: [
@@ -137,7 +137,7 @@ class ProductDetailsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 14),
-                  SizeColorQuantityTile(
+                  CommonTile(
                     text: 'Quantity',
                     widget: Row(
                       children: [

@@ -1,11 +1,11 @@
 import 'package:ecommerce_app/core/utils/enum_values.dart';
 
-enum Size { L, M, S, XL, XXL }
+enum Size { l, m, s, xl, xxl }
 
 final sizeValues = EnumValues({
-  "L": Size.L,
-  "M": Size.M,
-  "S": Size.S,
-  "XL": Size.XL,
-  "XXL": Size.XXL,
+  "L": Size.l,
+  "M": Size.m,
+  "S": Size.s,
+  "XL": Size.xl,
+  "XXL": Size.xxl,
 });

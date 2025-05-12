@@ -5,6 +5,8 @@ import 'package:ecommerce_app/features/product-catalog/presentation/bloc/product
 import 'package:ecommerce_app/features/product-catalog/presentation/widgets/product_tile.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/widgets/search_field.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/widgets/sort_filter_button.dart';
+import 'package:ecommerce_app/features/product-catalog/utils/bottom_draggable_filter_sheet.dart';
+import 'package:ecommerce_app/features/product-catalog/utils/bottom_draggable_sort_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -72,13 +74,17 @@ class _ProductCatalogPageState extends State<ProductCatalogPage> {
                                   SortFilterButton(
                                     text: 'Sort',
                                     icon: Icons.sort_rounded,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      bottomDraggableSortSheet(context);
+                                    },
                                   ),
                                   const SizedBox(width: 10),
                                   SortFilterButton(
                                     text: 'Filter',
                                     icon: Icons.filter_alt,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      bottomDraggableFilterSheet(context);
+                                    },
                                   ),
                                 ],
                               ),

@@ -1,9 +1,10 @@
+import 'package:ecommerce_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static final lightTheme = ThemeData.light().copyWith(
-    scaffoldBackgroundColor: Color(0xfff9f9f9),
+    scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
     appBarTheme: AppBarTheme(
       color: Colors.transparent,
       centerTitle: true,
@@ -15,17 +16,21 @@ class AppTheme {
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: Color(0xfff4f4f4),
+      fillColor: AppColors.fillColor,
       border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
     ),
     cardTheme: CardThemeData(color: Colors.white),
+    chipTheme: ChipThemeData(
+      labelStyle: const TextStyle(color: Colors.black),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+    ),
     progressIndicatorTheme: ProgressIndicatorThemeData(
       color: Colors.grey,
-      circularTrackColor: Color(0xfff9f9f9),
+      circularTrackColor: AppColors.scaffoldBackgroundColor,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Color(0xfff9f9f9),
+        backgroundColor: AppColors.scaffoldBackgroundColor,
         elevation: 2,
         iconColor: Colors.black,
       ),
