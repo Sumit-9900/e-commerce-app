@@ -15,5 +15,14 @@ final class ProductsFailure extends ProductsState {
 final class ProductsSuccess extends ProductsState {
   final ProductCatalog productCatalog;
   final SortOptions sortOptions;
-  ProductsSuccess(this.productCatalog, {required this.sortOptions});
+  final List<Category> selectedCategories;
+  final PriceRange? selectedPriceRange;
+  final Rating? selectedRating;
+  ProductsSuccess(
+    this.productCatalog, {
+    required this.sortOptions,
+    required this.selectedCategories,
+    required this.selectedPriceRange,
+    required this.selectedRating,
+  });
 }

@@ -2,6 +2,7 @@ import 'package:ecommerce_app/core/theme/app_colors.dart';
 import 'package:ecommerce_app/core/widgets/common_tile.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/sort_options.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/bloc/products_bloc.dart';
+import 'package:ecommerce_app/features/product-catalog/presentation/cubit/filter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -48,6 +49,7 @@ void bottomDraggableSortSheet(BuildContext context) {
                             sortOptionsValues.reverse.values.toList();
                         return GestureDetector(
                           onTap: () {
+                            context.read<FilterCubit>().clearFilters();
                             context.read<ProductsBloc>().add(
                               ProductsFetched(
                                 sortOptions:

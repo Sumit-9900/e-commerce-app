@@ -54,6 +54,22 @@ class _ProductCatalogPageState extends State<ProductCatalogPage> {
                     return Expanded(child: Loader());
                   } else if (state is ProductsSuccess) {
                     final products = state.productCatalog.products;
+
+                    if (products.isEmpty) {
+                      return Expanded(
+                        child: Center(
+                          child: Text(
+                            'No Products to display!',
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      );
+                    }
+
                     return Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,

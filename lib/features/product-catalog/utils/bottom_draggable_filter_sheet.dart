@@ -1,6 +1,14 @@
+import 'package:ecommerce_app/features/product-catalog/domain/enums/category.dart';
+import 'package:ecommerce_app/features/product-catalog/domain/enums/price_range.dart';
+import 'package:ecommerce_app/features/product-catalog/domain/enums/rating.dart';
+import 'package:ecommerce_app/features/product-catalog/presentation/bloc/products_bloc.dart';
+import 'package:ecommerce_app/features/product-catalog/presentation/cubit/filter_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void bottomDraggableFilterSheet(BuildContext context) {
+  final filtersCubit = context.read<FilterCubit>();
+  final productsCubit = context.read<ProductsBloc>();
   showModalBottomSheet(
     context: context,
     builder: (context) {
@@ -23,13 +31,35 @@ void bottomDraggableFilterSheet(BuildContext context) {
               child: ListView(
                 controller: scrollController,
                 children: [
-                  Center(
-                    child: Text(
-                      'Filter Options',
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.bold,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Filter Options',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
                       ),
-                    ),
+                      const SizedBox(width: 10),
+                      ElevatedButton(
+                        onPressed: () {
+                          final filterState = filtersCubit.state;
+                          productsCubit.add(
+                            ProductsFetched(
+                              selectedCategories:
+                                  filterState.selectedCategories,
+                              selectedPriceRange:
+                                  filterState.selectedPriceRange,
+                              selectedRating: filterState.selectedRating,
+                            ),
+                          );
+                          Navigator.of(context).pop();
+                        },
+                        child: Text('Apply'),
+                      ),
+                    ],
                   ),
                   const SizedBox(height: 24),
 
@@ -39,28 +69,42 @@ void bottomDraggableFilterSheet(BuildContext context) {
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(height: 10),
+
                   Wrap(
                     spacing: 10,
                     runSpacing: 10,
                     children:
-                        [
-                          'T-Shirts',
-                          'Shirts',
-                          'Jeans',
-                          'Trousers',
-                          'Sweatshirts',
-                        ].map((category) {
-                          return ChoiceChip(
-                            label: Text(category),
-                            selected: false, // Hook with Bloc or local state
-                            onSelected: (_) => Navigator.pop(context),
-                            selectedColor: Theme.of(
-                              context,
-                            ).colorScheme.primary.withOpacity(0.2),
-                            labelStyle: const TextStyle(color: Colors.black),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
+                        categoryValues.reverse.values.map((category) {
+                          final categoryEnum = categoryValues.map[category]!;
+                          return BlocSelector<
+                            FilterCubit,
+                            FilterState,
+                            List<Category>
+                          >(
+                            selector: (state) {
+                              return state.selectedCategories;
+                            },
+                            builder: (context, selectedCategories) {
+                              final isSelected = selectedCategories.contains(
+                                categoryEnum,
+                              );
+                              return ChoiceChip(
+                                label: Text(category),
+                                selected: isSelected,
+                                onSelected: (_) {
+                                  filtersCubit.toggleCategory(categoryEnum);
+                                },
+                                selectedColor: Theme.of(
+                                  context,
+                                ).colorScheme.primary.withOpacity(0.2),
+                                labelStyle: const TextStyle(
+                                  color: Colors.black,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              );
+                            },
                           );
                         }).toList(),
                   ),
@@ -73,31 +117,44 @@ void bottomDraggableFilterSheet(BuildContext context) {
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(height: 10),
+
                   Wrap(
                     spacing: 10,
                     runSpacing: 10,
                     children:
-                        [
-                          'Under ₹500',
-                          '₹500 - ₹1000',
-                          '₹1000 - ₹2000',
-                          'Above ₹2000',
-                        ].map((range) {
-                          return ChoiceChip(
-                            label: Text(range),
-                            selected: false, // Replace with your logic
-                            onSelected: (_) => Navigator.pop(context),
-                            selectedColor: Theme.of(
-                              context,
-                            ).colorScheme.primary.withOpacity(0.2),
-                            labelStyle: const TextStyle(color: Colors.black),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
+                        priceRangeValues.reverse.values.map((range) {
+                          final rangeEnum = priceRangeValues.map[range]!;
+                          return BlocSelector<
+                            FilterCubit,
+                            FilterState,
+                            PriceRange?
+                          >(
+                            selector: (state) {
+                              return state.selectedPriceRange;
+                            },
+                            builder: (context, selectedPriceRange) {
+                              final isSelected =
+                                  selectedPriceRange == rangeEnum;
+                              return ChoiceChip(
+                                label: Text(range),
+                                selected: isSelected,
+                                onSelected: (_) {
+                                  filtersCubit.selectPriceRange(rangeEnum);
+                                },
+                                selectedColor: Theme.of(
+                                  context,
+                                ).colorScheme.primary.withOpacity(0.2),
+                                labelStyle: const TextStyle(
+                                  color: Colors.black,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              );
+                            },
                           );
                         }).toList(),
                   ),
-
                   const SizedBox(height: 24),
 
                   // Rating Chips
@@ -110,20 +167,37 @@ void bottomDraggableFilterSheet(BuildContext context) {
                     spacing: 10,
                     runSpacing: 10,
                     children:
-                        ['4★ & above', '3★ & above', '2★ & above'].map((
-                          rating,
-                        ) {
-                          return ChoiceChip(
-                            label: Text(rating),
-                            selected: false, // Replace with Bloc state
-                            onSelected: (_) => Navigator.pop(context),
-                            selectedColor: Theme.of(
-                              context,
-                            ).colorScheme.primary.withOpacity(0.2),
-                            labelStyle: const TextStyle(color: Colors.black),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
+                        ratingValues.reverse.values.map((ratingText) {
+                          final ratingEnum = ratingValues.map[ratingText]!;
+
+                          return BlocSelector<
+                            FilterCubit,
+                            FilterState,
+                            Rating?
+                          >(
+                            selector: (state) => state.selectedRating,
+                            builder: (context, selectedRating) {
+                              final isSelected = selectedRating == ratingEnum;
+
+                              return ChoiceChip(
+                                label: Text(ratingText),
+                                selected: isSelected,
+                                onSelected: (_) {
+                                  context.read<FilterCubit>().selectRating(
+                                    ratingEnum,
+                                  );
+                                },
+                                selectedColor: Theme.of(
+                                  context,
+                                ).colorScheme.primary.withOpacity(0.2),
+                                labelStyle: const TextStyle(
+                                  color: Colors.black,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              );
+                            },
                           );
                         }).toList(),
                   ),
