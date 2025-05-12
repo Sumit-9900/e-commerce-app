@@ -20,9 +20,9 @@ final class ProductsSuccess extends ProductsState {
   final Rating? selectedRating;
   ProductsSuccess(
     this.productCatalog, {
-    required this.sortOptions,
-    required this.selectedCategories,
-    required this.selectedPriceRange,
-    required this.selectedRating,
+    this.sortOptions = SortOptions.newest,
+    this.selectedCategories = const [],
+    this.selectedPriceRange,
+    this.selectedRating,
   });
 }

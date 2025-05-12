@@ -17,6 +17,7 @@ class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
     : _getAllProducts = getAllProducts,
       super(ProductsInitial()) {
     on<ProductsFetched>(_onProductsFetched);
+    on<ProductsSearched>(_onProductsSearched);
   }
 
   void _onProductsFetched(
@@ -149,5 +150,35 @@ class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
       total: filterredProducts.length,
       categories: catalog.categories,
     );
+  }
+
+  void _onProductsSearched(
+    ProductsSearched event,
+    Emitter<ProductsState> emit,
+  ) async {
+    emit(ProductsLoading());
+
+    final res = await _getAllProducts(NoParams());
+
+    res.fold((l) => emit(ProductsFailure(l.message)), (r) {
+      final searchProducts =
+          r.products
+              .where(
+                (product) => product.name.trim().toLowerCase().contains(
+                  event.query.trim().toLowerCase(),
+                ),
+              )
+              .toList();
+
+      emit(
+        ProductsSuccess(
+          ProductCatalog(
+            products: searchProducts,
+            total: searchProducts.length,
+            categories: r.categories,
+          ),
+        ),
+      );
+    });
   }
 }

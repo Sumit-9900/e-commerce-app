@@ -15,3 +15,8 @@ final class ProductsFetched extends ProductsEvent {
     this.selectedRating,
   });
 }
+
+final class ProductsSearched extends ProductsEvent {
+  final String query;
+  ProductsSearched(this.query);
+}
