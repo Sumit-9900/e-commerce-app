@@ -8,12 +8,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+void main() async {
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
 
-  initDependencies();
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await initDependencies();
 
   runApp(
     MultiBlocProvider(
