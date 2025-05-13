@@ -4,6 +4,7 @@ import 'package:ecommerce_app/features/cart-checkout/presentation/pages/checkout
 import 'package:ecommerce_app/features/cart-checkout/presentation/pages/order_confirmation_page.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/pages/payment_page.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/pages/shipping_page.dart';
+import 'package:ecommerce_app/features/cart/domain/entities/cart.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/entities/product.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/color.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/size.dart';
@@ -50,7 +51,10 @@ class AppRouterConfig {
       GoRoute(
         path: '/checkout',
         name: AppRouterConstants.productCheckoutRoute,
-        builder: (context, state) => const CheckoutPage(),
+        builder: (context, state) {
+          final cartProducts = state.extra as List<Cart>;
+          return CheckoutPage(cartProducts: cartProducts);
+        },
       ),
       GoRoute(
         path: '/checkout/shipping',

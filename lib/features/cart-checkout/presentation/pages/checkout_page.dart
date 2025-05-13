@@ -1,9 +1,12 @@
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/checkout_item_tile.dart';
+import 'package:ecommerce_app/features/cart/domain/entities/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class CheckoutPage extends StatelessWidget {
-  const CheckoutPage({super.key});
+  final List<Cart> cartProducts;
+  const CheckoutPage({super.key, required this.cartProducts});
 
   @override
   Widget build(BuildContext context) {
@@ -15,33 +18,25 @@ class CheckoutPage extends StatelessWidget {
         child: Column(
           children: [
             // Delivery Address Section
-            _sectionTitle("Delivery Address"),
-            _infoCard(
-              context,
-              child: ListTile(
-                title: const Text("John Doe"),
-                subtitle: const Text("1234 Flutter St, Code City, 56789"),
-                trailing: TextButton(
-                  onPressed: () {},
-                  child: const Text("Change"),
-                ),
+            _sectionTitle("Products"),
+            const SizedBox(height: 2),
+            Expanded(
+              child: ListView.builder(
+                itemCount: cartProducts.length,
+                itemBuilder: (context, index) {
+                  final cartProduct = cartProducts[index];
+                  return CheckoutItemTile(
+                    imageUrl: cartProduct.image,
+                    title: cartProduct.title,
+                    price: cartProduct.price.toDouble(),
+                    size: cartProduct.size,
+                    color: cartProduct.color,
+                    quantity: cartProduct.quantity.toString(),
+                  );
+                },
               ),
             ),
-            const SizedBox(height: 20),
 
-            // Payment Method Section
-            _sectionTitle("Payment Method"),
-            _infoCard(
-              context,
-              child: ListTile(
-                title: const Text("Visa"),
-                subtitle: const Text("**** **** **** 1234"),
-                trailing: TextButton(
-                  onPressed: () {},
-                  child: const Text("Change"),
-                ),
-              ),
-            ),
             const SizedBox(height: 20),
 
             // Order Summary
@@ -50,15 +45,15 @@ class CheckoutPage extends StatelessWidget {
               context,
               child: Column(
                 children: const [
-                  _summaryRow("Subtotal", "\$200"),
-                  _summaryRow("Shipping", "\$8.00"),
-                  _summaryRow("Tax", "\$0.00"),
+                  _SummaryRow("Subtotal", "\$200"),
+                  _SummaryRow("Shipping", "\$8.00"),
+                  _SummaryRow("Tax", "\$0.00"),
                   Divider(),
-                  _summaryRow("Total", "\$208", isTotal: true),
+                  _SummaryRow("Total", "\$208", isTotal: true),
                 ],
               ),
             ),
-            const Spacer(),
+            const SizedBox(height: 10),
 
             // Checkout Button
             SizedBox(
@@ -107,12 +102,12 @@ class CheckoutPage extends StatelessWidget {
   }
 }
 
-class _summaryRow extends StatelessWidget {
+class _SummaryRow extends StatelessWidget {
   final String label;
   final String amount;
   final bool isTotal;
 
-  const _summaryRow(this.label, this.amount, {this.isTotal = false});
+  const _SummaryRow(this.label, this.amount, {this.isTotal = false});
 
   @override
   Widget build(BuildContext context) {

@@ -1,10 +1,13 @@
 import 'package:ecommerce_app/core/utils/bottom_draggable_sheet.dart';
 import 'package:ecommerce_app/core/utils/name_to_color.dart';
+import 'package:ecommerce_app/core/utils/show_snackbar.dart';
 import 'package:ecommerce_app/core/widgets/add_to_cart_button.dart';
 import 'package:ecommerce_app/core/widgets/rating_bar.dart';
+import 'package:ecommerce_app/features/cart/domain/entities/cart.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/entities/product.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/category.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/color.dart';
+import 'package:ecommerce_app/features/product-catalog/presentation/cubit/add_product_to_cart_cubit.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/cubit/product_details_cubit.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/widgets/cached_image.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/widgets/review_tile.dart';
@@ -296,9 +299,55 @@ class ProductDetailsPage extends StatelessWidget {
             bottom: 10,
             left: 10,
             right: 10,
-            child: GestureDetector(
-              onTap: () {},
-              child: AddToCartButton(price: product.price.toStringAsFixed(1)),
+            child: BlocConsumer<AddProductToCartCubit, AddProductToCartState>(
+              listener: (context, state) {
+                if (state is AddProductToCartFailure) {
+                  showSnackBar(
+                    context,
+                    message: state.message,
+                    color: Colors.red,
+                  );
+                } else if (state is AddProductToCartSuccess) {
+                  showSnackBar(
+                    context,
+                    message: 'Product has been added to the Cart!',
+                    color: Colors.green,
+                  );
+                }
+              },
+              builder: (context, state) {
+                return GestureDetector(
+                  onTap: () {
+                    final state = context.read<ProductDetailsCubit>().state;
+                    int quantity = 1;
+                    String color = '';
+                    String size = '';
+                    if (state is ProductDetailsSuccess) {
+                      quantity = state.quantity;
+                      color = state.color;
+                      size = state.size;
+                    }
+
+                    final cart = Cart(
+                      id: product.id.toString(),
+                      title: product.name,
+                      price: product.price,
+                      quantity: quantity,
+                      color: color,
+                      size: size,
+                      image: product.images[0],
+                    );
+
+                    context.read<AddProductToCartCubit>().addProductToCart(
+                      cart,
+                    );
+                  },
+                  child: AddToCartButton(
+                    price: product.price.toStringAsFixed(1),
+                    state: state,
+                  ),
+                );
+              },
             ),
           ),
         ],

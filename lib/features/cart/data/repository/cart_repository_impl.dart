@@ -30,4 +30,34 @@ class CartRepositoryImpl implements CartRepository {
       return left(Failure(e.toString()));
     }
   }
+
+  @override
+  Future<Either<Failure, void>> deleteCartItems() async {
+    try {
+      await localDataSource.deleteAllItems();
+      return right(null);
+    } catch (e) {
+      return left(Failure(e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, void>> decrementQuantity(String id) async {
+    try {
+      await localDataSource.decrementQuantity(id);
+      return right(null);
+    } catch (e) {
+      return left(Failure(e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, void>> incrementQuantity(String id) async {
+    try {
+      await localDataSource.incrementQuantity(id);
+      return right(null);
+    } catch (e) {
+      return left(Failure(e.toString()));
+    }
+  }
 }
