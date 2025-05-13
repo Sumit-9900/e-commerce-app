@@ -70,12 +70,6 @@ class OrderConfirmationPage extends StatelessWidget {
             ),
 
             const SizedBox(height: 10),
-
-            // Track Order Button
-            // TextButton(
-            //   onPressed: () {},
-            //   child: const Text("Track Order", style: TextStyle(fontSize: 16)),
-            // ),
           ],
         ),
       ),

@@ -14,9 +14,15 @@ final class CartProductsDeleted extends CartEvent {}
 final class CartProductQuantityDecremented extends CartEvent {
   final String id;
   const CartProductQuantityDecremented(this.id);
+
+  @override
+  List<Object> get props => [id];
 }
 
 final class CartProductQuantityIncremented extends CartEvent {
   final String id;
   const CartProductQuantityIncremented(this.id);
+
+  @override
+  List<Object> get props => [id];
 }
