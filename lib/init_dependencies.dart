@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/features/cart-checkout/presentation/bloc/cart_bloc.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/cubit/delivery_option_cubit.dart';
 import 'package:ecommerce_app/features/cart/data/datasources/cart_local_datasource.dart';
 import 'package:ecommerce_app/features/cart/data/models/cart_model.dart';
 import 'package:ecommerce_app/features/cart/data/repository/cart_repository_impl.dart';
@@ -84,4 +85,6 @@ Future<void> initDependencies() async {
   getIt.registerLazySingleton(
     () => AddProductToCartCubit(addToCart: getIt(), cartBloc: getIt()),
   );
+
+  getIt.registerLazySingleton(() => DeliveryOptionCubit());
 }
