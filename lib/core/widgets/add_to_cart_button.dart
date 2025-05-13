@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/constants/const.dart';
 import 'package:ecommerce_app/core/theme/app_colors.dart';
 import 'package:ecommerce_app/core/widgets/loader.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/cubit/add_product_to_cart_cubit.dart';
@@ -25,7 +26,7 @@ class AddToCartButton extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      '₹$price',
+                      '${Const.indianRuppee}$price',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,

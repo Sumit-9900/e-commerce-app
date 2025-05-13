@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:ecommerce_app/core/constants/const.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/bloc/cart_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -66,7 +67,7 @@ class CartItemTile extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    '\$${price.toStringAsFixed(1)}',
+                    '${Const.indianRuppee}${price.toStringAsFixed(1)}',
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],

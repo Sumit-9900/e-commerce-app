@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/constants/const.dart';
 import 'package:ecommerce_app/core/utils/bottom_draggable_sheet.dart';
 import 'package:ecommerce_app/core/utils/name_to_color.dart';
 import 'package:ecommerce_app/core/utils/show_snackbar.dart';
@@ -50,7 +51,7 @@ class ProductDetailsPage extends StatelessWidget {
                   RatingBar(rating: product.rating),
                   const SizedBox(height: 10),
                   Text(
-                    '₹${product.price}',
+                    '${Const.indianRuppee}${product.price}',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,

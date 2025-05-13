@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:ecommerce_app/core/constants/const.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutItemTile extends StatelessWidget {
@@ -64,7 +65,7 @@ class CheckoutItemTile extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    '\$${price.toStringAsFixed(1)}',
+                    '${Const.indianRuppee}${price.toStringAsFixed(1)}',
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],

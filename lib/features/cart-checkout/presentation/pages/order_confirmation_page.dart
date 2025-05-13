@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/constants/const.dart';
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -43,7 +44,7 @@ class OrderConfirmationPage extends StatelessWidget {
             _orderSummaryTile('Order ID', '#123456789'),
             _orderSummaryTile('Estimated Delivery', '25th May, 2025'),
             _orderSummaryTile('Payment Method', 'Credit Card'),
-            _orderSummaryTile('Total Amount', '₹2,499'),
+            _orderSummaryTile('Total Amount', '${Const.indianRuppee}2,499'),
 
             const SizedBox(height: 30),
 
