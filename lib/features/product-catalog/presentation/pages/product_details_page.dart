@@ -296,7 +296,10 @@ class ProductDetailsPage extends StatelessWidget {
             bottom: 10,
             left: 10,
             right: 10,
-            child: AddToCartButton(price: product.price.toStringAsFixed(1)),
+            child: GestureDetector(
+              onTap: () {},
+              child: AddToCartButton(price: product.price.toStringAsFixed(1)),
+            ),
           ),
         ],
       ),

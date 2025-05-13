@@ -1,4 +1,9 @@
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/pages/cart_page.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/pages/checkout_page.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/pages/order_confirmation_page.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/pages/payment_page.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/pages/shipping_page.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/entities/product.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/color.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/size.dart';
@@ -36,6 +41,31 @@ class AppRouterConfig {
             child: ProductDetailsPage(product: product),
           );
         },
+      ),
+      GoRoute(
+        path: '/cart',
+        name: AppRouterConstants.productCartRoute,
+        builder: (context, state) => const CartPage(),
+      ),
+      GoRoute(
+        path: '/checkout',
+        name: AppRouterConstants.productCheckoutRoute,
+        builder: (context, state) => const CheckoutPage(),
+      ),
+      GoRoute(
+        path: '/checkout/shipping',
+        name: AppRouterConstants.productShippingRoute,
+        builder: (context, state) => const ShippingPage(),
+      ),
+      GoRoute(
+        path: '/checkout/payment',
+        name: AppRouterConstants.productPaymentRoute,
+        builder: (context, state) => const PaymentPage(),
+      ),
+      GoRoute(
+        path: '/checkout/confirm',
+        name: AppRouterConstants.productConfirmationRoute,
+        builder: (context, state) => const OrderConfirmationPage(),
       ),
     ],
     errorBuilder: (context, state) {
