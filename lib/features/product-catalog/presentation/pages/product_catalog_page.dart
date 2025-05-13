@@ -9,6 +9,7 @@ import 'package:ecommerce_app/features/product-catalog/presentation/widgets/sear
 import 'package:ecommerce_app/features/product-catalog/presentation/widgets/sort_filter_button.dart';
 import 'package:ecommerce_app/features/product-catalog/utils/bottom_draggable_filter_sheet.dart';
 import 'package:ecommerce_app/features/product-catalog/utils/bottom_draggable_sort_sheet.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -41,7 +42,20 @@ class _ProductCatalogPageState extends State<ProductCatalogPage> {
         searchFocusNode.unfocus();
       },
       child: Scaffold(
-        appBar: AppBar(title: Text('Men\'s Clothing')),
+        appBar: AppBar(
+          title: Text('Men\'s Clothing'),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 12.0),
+              child: IconButton(
+                onPressed: () {
+                  context.pushNamed(AppRouterConstants.productCartRoute);
+                },
+                icon: Icon(CupertinoIcons.bag_fill),
+              ),
+            ),
+          ],
+        ),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12),

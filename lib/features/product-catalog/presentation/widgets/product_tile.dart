@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/constants/const.dart';
 import 'package:ecommerce_app/core/widgets/rating_bar.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/entities/product.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/widgets/cached_image.dart';
@@ -48,7 +49,7 @@ class ProductTile extends StatelessWidget {
                   ),
                   const SizedBox(height: 3),
                   Text(
-                    '₹${product.price}',
+                    '${Const.indianRuppee}${product.price}',
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
