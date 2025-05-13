@@ -1,7 +1,13 @@
 import 'package:ecommerce_app/core/constants/const.dart';
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
+import 'package:ecommerce_app/core/utils/order_utils.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/bloc/cart_bloc.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/cubit/payment_cubit.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/enums/payment.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:uuid/uuid.dart';
 
 class OrderConfirmationPage extends StatelessWidget {
   const OrderConfirmationPage({super.key});
@@ -9,6 +15,17 @@ class OrderConfirmationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final estimatedDelivery =
+        DateTime.now().add(Duration(days: 3)).toString().split(' ').first;
+    final paymentMethod =
+        (context.read<PaymentCubit>().state as PaymentSuccess).method;
+    final paymentInString = paymentMethodValues.reverse[paymentMethod] ?? '';
+    final cartProducts =
+        (context.read<CartBloc>().state as CartSuccess).cartProducts;
+    final totalProductPrice = OrderUtils.getSubtotal(cartProducts);
+    final totalAmount = OrderUtils.getTotal(totalProductPrice);
+    final uniqueId = '#ORD${Uuid().v4().split('-').first.toUpperCase()}';
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Order Confirmation"),
@@ -17,21 +34,26 @@ class OrderConfirmationPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Success Icon
+            const SizedBox(height: 30),
+
+            // ✅ Success Icon
             Icon(
-              Icons.check_circle_outline,
+              Icons.check_circle_outline_rounded,
+              size: 90,
               color: theme.colorScheme.primary,
-              size: 80,
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 20),
+
+            // ✅ Thank You Message
             const Text(
-              'Thank You!',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              "Thank You!",
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 6),
+            const SizedBox(height: 8),
             Text(
-              'Your order has been placed successfully.',
+              "Your order has been placed successfully.",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16,
@@ -40,15 +62,18 @@ class OrderConfirmationPage extends StatelessWidget {
             ),
             const SizedBox(height: 30),
 
-            // Order Summary
-            _orderSummaryTile('Order ID', '#123456789'),
-            _orderSummaryTile('Estimated Delivery', '25th May, 2025'),
-            _orderSummaryTile('Payment Method', 'Credit Card'),
-            _orderSummaryTile('Total Amount', '${Const.indianRuppee}2,499'),
+            // ✅ Order Summary
+            _orderSummaryTile('Order ID', uniqueId),
+            _orderSummaryTile('Estimated Delivery', estimatedDelivery),
+            _orderSummaryTile('Payment Method', paymentInString),
+            _orderSummaryTile(
+              'Total Amount',
+              '${Const.indianRuppee}${totalAmount.toStringAsFixed(1)}',
+            ),
 
-            const SizedBox(height: 30),
+            const Spacer(),
 
-            // Continue Shopping Button
+            // ✅ Continue Shopping Button
             SizedBox(
               width: double.infinity,
               height: 50,
@@ -68,7 +93,6 @@ class OrderConfirmationPage extends StatelessWidget {
                 ),
               ),
             ),
-
             const SizedBox(height: 10),
           ],
         ),
@@ -76,14 +100,15 @@ class OrderConfirmationPage extends StatelessWidget {
     );
   }
 
-  Widget _orderSummaryTile(String label, String value) {
+  // 🔹 Reusable Order Summary Tile
+  Widget _orderSummaryTile(String title, String value) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            label,
+            title,
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
           ),
           Text(

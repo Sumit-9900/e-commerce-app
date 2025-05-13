@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/core/router/app_router_config.dart';
 import 'package:ecommerce_app/core/theme/app_theme.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/bloc/cart_bloc.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/cubit/payment_cubit.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/sort_options.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/bloc/products_bloc.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/cubit/add_product_to_cart_cubit.dart';
@@ -33,6 +34,7 @@ void main() async {
         BlocProvider(
           create: (_) => getIt<CartBloc>()..add(CartProductsFetched()),
         ),
+        BlocProvider(create: (_) => getIt<PaymentCubit>(),),
       ],
       child: const MyApp(),
     ),
