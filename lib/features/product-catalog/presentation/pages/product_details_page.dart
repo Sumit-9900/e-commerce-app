@@ -28,330 +28,311 @@ class ProductDetailsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(categoryValues.reverse[product.category].toString()),
       ),
-      body: Stack(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CachedImage(imageUrl: product.images[0], height: 300),
-                  const SizedBox(height: 10),
-                  Text(
-                    product.name,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  RatingBar(rating: product.rating),
-                  const SizedBox(height: 10),
-                  Text(
-                    '${Const.indianRuppee}${product.price}',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  CommonTile(
-                    text: 'Size',
-                    widget: Row(
-                      children: [
-                        BlocSelector<
-                          ProductDetailsCubit,
-                          ProductDetailsState,
-                          String
-                        >(
-                          selector: (state) {
-                            if (state is ProductDetailsSuccess) {
-                              return state.size;
-                            } else {
-                              return '';
-                            }
-                          },
-                          builder: (context, selectedSize) {
-                            return Text(
-                              selectedSize,
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              ),
-                            );
-                          },
-                        ),
-                        const SizedBox(width: 14),
-                        IconButton(
-                          onPressed: () {
-                            bottomDraggableSheet(
-                              context,
-                              headingText: 'Size',
-                              variants: product.variants.sizes,
-                            );
-                          },
-                          icon: Icon(Icons.keyboard_arrow_down, size: 35),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 14),
-                  CommonTile(
-                    text: 'Color',
-                    widget: Row(
-                      children: [
-                        BlocSelector<
-                          ProductDetailsCubit,
-                          ProductDetailsState,
-                          String
-                        >(
-                          selector: (state) {
-                            if (state is ProductDetailsSuccess) {
-                              return state.color;
-                            } else {
-                              return '';
-                            }
-                          },
-                          builder: (context, selectedColor) {
-                            return CircleAvatar(
-                              radius: 15,
-                              backgroundColor: getColorFromName(
-                                colorValues.map[selectedColor]!,
-                              ),
-                            );
-                          },
-                        ),
-                        const SizedBox(width: 5),
-                        IconButton(
-                          onPressed: () {
-                            bottomDraggableSheet(
-                              context,
-                              headingText: 'Color',
-                              variants: product.variants.colors,
-                            );
-                          },
-                          icon: Icon(Icons.keyboard_arrow_down, size: 35),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 14),
-                  CommonTile(
-                    text: 'Quantity',
-                    widget: Row(
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            context
-                                .read<ProductDetailsCubit>()
-                                .incrementQuantity();
-                          },
-                          icon: Icon(Icons.add),
-                          style: IconButton.styleFrom(
-                            foregroundColor: Colors.white,
-                            backgroundColor: Colors.black45,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        BlocSelector<
-                          ProductDetailsCubit,
-                          ProductDetailsState,
-                          int
-                        >(
-                          selector: (state) {
-                            if (state is ProductDetailsSuccess) {
-                              return state.quantity;
-                            } else {
-                              return 1;
-                            }
-                          },
-                          builder: (context, quantity) {
-                            return Text(
-                              quantity.toString(),
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              ),
-                            );
-                          },
-                        ),
-                        const SizedBox(width: 10),
-                        IconButton(
-                          onPressed: () {
-                            context
-                                .read<ProductDetailsCubit>()
-                                .decrementQuantity();
-                          },
-                          icon: Icon(CupertinoIcons.minus),
-                          style: IconButton.styleFrom(
-                            foregroundColor: Colors.white,
-                            backgroundColor: Colors.black45,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    'Product Details',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black,
-                    ),
-                  ),
-                  const SizedBox(height: 3),
-                  BlocBuilder<ProductDetailsCubit, ProductDetailsState>(
-                    builder: (context, state) {
-                      final isMore =
-                          state is ProductDetailsSuccess && state.isMore;
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: BlocConsumer<AddProductToCartCubit, AddProductToCartState>(
+          listener: (context, state) {
+            if (state is AddProductToCartFailure) {
+              showSnackBar(context, message: state.message, color: Colors.red);
+            } else if (state is AddProductToCartSuccess) {
+              showSnackBar(
+                context,
+                message: 'Product has been added to the Cart!',
+                color: Colors.green,
+              );
+            }
+          },
+          builder: (context, state) {
+            return GestureDetector(
+              onTap: () {
+                final state = context.read<ProductDetailsCubit>().state;
+                int quantity = 1;
+                String color = '';
+                String size = '';
+                if (state is ProductDetailsSuccess) {
+                  quantity = state.quantity;
+                  color = state.color;
+                  size = state.size;
+                }
 
-                      final description =
-                          isMore
-                              ? product.description
-                              : product.description.substring(
-                                0,
-                                (product.description.length / 3).floor(),
-                              );
+                final cart = Cart(
+                  id: product.id.toString(),
+                  title: product.name,
+                  price: product.price,
+                  quantity: quantity,
+                  color: color,
+                  size: size,
+                  image: product.images[0],
+                );
 
-                      return RichText(
-                        text: TextSpan(
-                          text: description,
-                          style: const TextStyle(
-                            fontSize: 14,
-                            height: 1.5,
-                            fontWeight: FontWeight.normal,
+                context.read<AddProductToCartCubit>().addProductToCart(cart);
+              },
+              child: AddToCartButton(
+                price: product.price.toStringAsFixed(1),
+                state: state,
+              ),
+            );
+          },
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Hero(
+                tag: product.id,
+                child: CachedImage(imageUrl: product.images[0], height: 300),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                product.name,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                ),
+              ),
+              const SizedBox(height: 10),
+              RatingBar(rating: product.rating),
+              const SizedBox(height: 10),
+              Text(
+                '${Const.indianRuppee}${product.price}',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                ),
+              ),
+              const SizedBox(height: 10),
+              CommonTile(
+                text: 'Size',
+                widget: Row(
+                  children: [
+                    BlocSelector<
+                      ProductDetailsCubit,
+                      ProductDetailsState,
+                      String
+                    >(
+                      selector: (state) {
+                        if (state is ProductDetailsSuccess) {
+                          return state.size;
+                        } else {
+                          return '';
+                        }
+                      },
+                      builder: (context, selectedSize) {
+                        return Text(
+                          selectedSize,
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),
-                          children: [
-                            TextSpan(
-                              text: isMore ? '...Less' : '...More',
-                              style: const TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.lightBlue,
-                              ),
-                              recognizer:
-                                  TapGestureRecognizer()
-                                    ..onTap = () {
-                                      context
-                                          .read<ProductDetailsCubit>()
-                                          .toggleMore();
-                                    },
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    'Reviews',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                        );
+                      },
                     ),
-                  ),
-                  const SizedBox(height: 5),
-                  Text(
-                    '${product.rating.toStringAsFixed(1)} Ratings',
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                    const SizedBox(width: 14),
+                    IconButton(
+                      onPressed: () {
+                        bottomDraggableSheet(
+                          context,
+                          headingText: 'Size',
+                          variants: product.variants.sizes,
+                        );
+                      },
+                      icon: Icon(Icons.keyboard_arrow_down, size: 35),
                     ),
-                  ),
-                  const SizedBox(height: 5),
-                  Text(
-                    '${product.reviews.length} Reviews',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                  ),
-                  const SizedBox(height: 5),
-                  ListView.separated(
-                    separatorBuilder:
-                        (context, index) => const SizedBox(height: 8),
-                    itemCount: product.reviews.length,
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemBuilder: (context, index) {
-                      final review = product.reviews[index];
-                      return ReviewTile(review: review);
-                    },
-                  ),
-                  const SizedBox(height: 80),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ),
-          Positioned(
-            bottom: 10,
-            left: 10,
-            right: 10,
-            child: BlocConsumer<AddProductToCartCubit, AddProductToCartState>(
-              listener: (context, state) {
-                if (state is AddProductToCartFailure) {
-                  showSnackBar(
-                    context,
-                    message: state.message,
-                    color: Colors.red,
-                  );
-                } else if (state is AddProductToCartSuccess) {
-                  showSnackBar(
-                    context,
-                    message: 'Product has been added to the Cart!',
-                    color: Colors.green,
-                  );
-                }
-              },
-              builder: (context, state) {
-                return GestureDetector(
-                  onTap: () {
-                    final state = context.read<ProductDetailsCubit>().state;
-                    int quantity = 1;
-                    String color = '';
-                    String size = '';
-                    if (state is ProductDetailsSuccess) {
-                      quantity = state.quantity;
-                      color = state.color;
-                      size = state.size;
-                    }
+              const SizedBox(height: 14),
+              CommonTile(
+                text: 'Color',
+                widget: Row(
+                  children: [
+                    BlocSelector<
+                      ProductDetailsCubit,
+                      ProductDetailsState,
+                      String
+                    >(
+                      selector: (state) {
+                        if (state is ProductDetailsSuccess) {
+                          return state.color;
+                        } else {
+                          return '';
+                        }
+                      },
+                      builder: (context, selectedColor) {
+                        return CircleAvatar(
+                          radius: 15,
+                          backgroundColor: getColorFromName(
+                            colorValues.map[selectedColor]!,
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(width: 5),
+                    IconButton(
+                      onPressed: () {
+                        bottomDraggableSheet(
+                          context,
+                          headingText: 'Color',
+                          variants: product.variants.colors,
+                        );
+                      },
+                      icon: Icon(Icons.keyboard_arrow_down, size: 35),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 14),
+              CommonTile(
+                text: 'Quantity',
+                widget: Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        context.read<ProductDetailsCubit>().incrementQuantity();
+                      },
+                      icon: Icon(Icons.add),
+                      style: IconButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.black45,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    BlocSelector<ProductDetailsCubit, ProductDetailsState, int>(
+                      selector: (state) {
+                        if (state is ProductDetailsSuccess) {
+                          return state.quantity;
+                        } else {
+                          return 1;
+                        }
+                      },
+                      builder: (context, quantity) {
+                        return Text(
+                          quantity.toString(),
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(width: 10),
+                    IconButton(
+                      onPressed: () {
+                        context.read<ProductDetailsCubit>().decrementQuantity();
+                      },
+                      icon: Icon(CupertinoIcons.minus),
+                      style: IconButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.black45,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                'Product Details',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                ),
+              ),
+              const SizedBox(height: 3),
+              BlocBuilder<ProductDetailsCubit, ProductDetailsState>(
+                builder: (context, state) {
+                  final isMore = state is ProductDetailsSuccess && state.isMore;
 
-                    final cart = Cart(
-                      id: product.id.toString(),
-                      title: product.name,
-                      price: product.price,
-                      quantity: quantity,
-                      color: color,
-                      size: size,
-                      image: product.images[0],
-                    );
+                  final description =
+                      isMore
+                          ? product.description
+                          : product.description.substring(
+                            0,
+                            (product.description.length / 3).floor(),
+                          );
 
-                    context.read<AddProductToCartCubit>().addProductToCart(
-                      cart,
-                    );
-                  },
-                  child: AddToCartButton(
-                    price: product.price.toStringAsFixed(1),
-                    state: state,
-                  ),
-                );
-              },
-            ),
+                  return RichText(
+                    text: TextSpan(
+                      text: description,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        height: 1.5,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.black,
+                      ),
+                      children: [
+                        TextSpan(
+                          text: isMore ? '...Less' : '...More',
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.lightBlue,
+                          ),
+                          recognizer:
+                              TapGestureRecognizer()
+                                ..onTap = () {
+                                  context
+                                      .read<ProductDetailsCubit>()
+                                      .toggleMore();
+                                },
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(height: 10),
+              Text(
+                'Reviews',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              const SizedBox(height: 5),
+              Text(
+                '${product.rating.toStringAsFixed(1)} Ratings',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              const SizedBox(height: 5),
+              Text(
+                '${product.reviews.length} Reviews',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              ),
+              const SizedBox(height: 5),
+              ListView.separated(
+                separatorBuilder: (context, index) => const SizedBox(height: 8),
+                itemCount: product.reviews.length,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  final review = product.reviews[index];
+                  return ReviewTile(review: review);
+                },
+              ),
+              const SizedBox(height: 80),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
