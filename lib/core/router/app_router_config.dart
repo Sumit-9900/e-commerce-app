@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/animations/page_transitions.dart';
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/pages/cart_page.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/pages/checkout_page.dart';
@@ -46,30 +47,47 @@ class AppRouterConfig {
       GoRoute(
         path: '/cart',
         name: AppRouterConstants.productCartRoute,
-        builder: (context, state) => const CartPage(),
+        pageBuilder:
+            (context, state) =>
+                buildFadeTransitionPage(state: state, child: const CartPage()),
       ),
       GoRoute(
         path: '/checkout',
         name: AppRouterConstants.productCheckoutRoute,
-        builder: (context, state) {
+        pageBuilder: (context, state) {
           final cartProducts = state.extra as List<Cart>;
-          return CheckoutPage(cartProducts: cartProducts);
+          return buildSlideTransitionPage(
+            state: state,
+            child: CheckoutPage(cartProducts: cartProducts),
+          );
         },
       ),
       GoRoute(
         path: '/checkout/shipping',
         name: AppRouterConstants.productShippingRoute,
-        builder: (context, state) => const ShippingPage(),
+        pageBuilder:
+            (context, state) => buildSlideTransitionPage(
+              state: state,
+              child: const ShippingPage(),
+            ),
       ),
       GoRoute(
         path: '/checkout/payment',
         name: AppRouterConstants.productPaymentRoute,
-        builder: (context, state) => const PaymentPage(),
+        pageBuilder:
+            (context, state) => buildSlideTransitionPage(
+              state: state,
+              child: const PaymentPage(),
+            ),
       ),
       GoRoute(
         path: '/checkout/confirm',
         name: AppRouterConstants.productConfirmationRoute,
-        builder: (context, state) => const OrderConfirmationPage(),
+        pageBuilder:
+            (context, state) => buildSlideTransitionPage(
+              state: state,
+              child: const OrderConfirmationPage(),
+            ),
       ),
     ],
     errorBuilder: (context, state) {

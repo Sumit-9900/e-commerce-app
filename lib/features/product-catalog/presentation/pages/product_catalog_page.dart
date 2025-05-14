@@ -165,19 +165,23 @@ class _ProductCatalogPageState extends State<ProductCatalogPage> {
                                       (index % 4 == 1 || index % 4 == 2);
                                   final product = products[index];
 
-                                  return GestureDetector(
-                                    onTap: () {
-                                      context.pushNamed(
-                                        AppRouterConstants.productDetailsRoute,
-                                        pathParameters: {
-                                          'id': product.id.toString(),
-                                        },
-                                        extra: product,
-                                      );
-                                    },
-                                    child: ProductTile(
-                                      isLarge: isLarge,
-                                      product: product,
+                                  return Hero(
+                                    tag: product.id,
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        context.pushNamed(
+                                          AppRouterConstants
+                                              .productDetailsRoute,
+                                          pathParameters: {
+                                            'id': product.id.toString(),
+                                          },
+                                          extra: product,
+                                        );
+                                      },
+                                      child: ProductTile(
+                                        isLarge: isLarge,
+                                        product: product,
+                                      ),
                                     ),
                                   );
                                 },
