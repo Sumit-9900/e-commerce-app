@@ -5,12 +5,14 @@ class PaymentOptionTile extends StatelessWidget {
   final IconData icon;
   final bool selected;
   final VoidCallback onTap;
+  final bool isTablet;
   const PaymentOptionTile({
     super.key,
     required this.title,
     required this.icon,
     this.selected = false,
     required this.onTap,
+    required this.isTablet,
   });
 
   @override
@@ -20,7 +22,13 @@ class PaymentOptionTile extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ListTile(
         leading: Icon(icon, color: Theme.of(context).colorScheme.primary),
-        title: Text(title, style: const TextStyle(fontWeight: FontWeight.w500)),
+        title: Text(
+          title,
+          style: TextStyle(
+            fontSize: isTablet ? 24 : 18,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
         onTap: onTap,
         trailing: Radio<bool>(
           value: true,

@@ -1,7 +1,9 @@
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
+import 'package:ecommerce_app/core/utils/device_utils.dart';
 import 'package:ecommerce_app/core/utils/show_snackbar.dart';
 import 'package:ecommerce_app/core/widgets/loader.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/bloc/cart_bloc.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/cart_checkout_button.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/cart_item_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,24 +14,23 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+    final isTablet = DeviceUtils.isTablet(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cart'),
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.pop(context),
-        ),
         actions: [
           TextButton(
             onPressed: () {
               context.read<CartBloc>().add(CartProductsDeleted());
             },
-            child: const Text(
+            child: Text(
               'Remove All',
-              style: TextStyle(fontSize: 16, color: Colors.black),
+              style: TextStyle(
+                fontSize: isTablet ? 22 : 16,
+                color: Colors.black,
+              ),
             ),
           ),
         ],
@@ -45,12 +46,12 @@ class CartPage extends StatelessWidget {
             return const Loader();
           } else if (state is CartSuccess) {
             if (state.cartProducts.isEmpty) {
-              return const Center(
+              return Center(
                 child: Text(
                   'No Cart Products to display!',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
-                    fontSize: 18,
+                    fontSize: isTablet ? 22 : 18,
                     color: Colors.black,
                   ),
                 ),
@@ -74,32 +75,21 @@ class CartPage extends StatelessWidget {
                           size: product.size,
                           color: product.color,
                           quantity: product.quantity.toString(),
+                          isTablet: isTablet,
                         );
                       },
                     ),
                   ),
                   const SizedBox(height: 16),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 50,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: theme.colorScheme.primary,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                      ),
-                      onPressed: () {
-                        context.pushNamed(
-                          AppRouterConstants.productCheckoutRoute,
-                          extra: state.cartProducts,
-                        );
-                      }, // checkout
-                      child: const Text(
-                        'Checkout',
-                        style: TextStyle(fontSize: 18, color: Colors.black),
-                      ),
-                    ),
+                  CartCheckoutButton(
+                    isTablet: isTablet,
+                    label: 'Checkout',
+                    onPressed: () {
+                      context.pushNamed(
+                        AppRouterConstants.productCheckoutRoute,
+                        extra: state.cartProducts,
+                      );
+                    },
                   ),
                   const SizedBox(height: 16),
                 ],

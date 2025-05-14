@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/core/theme/app_colors.dart';
+import 'package:ecommerce_app/core/utils/device_utils.dart';
 import 'package:ecommerce_app/core/utils/name_to_color.dart';
 import 'package:ecommerce_app/core/widgets/common_tile.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/cubit/product_details_cubit.dart';
@@ -19,7 +20,10 @@ void bottomDraggableSheet(
     context: context,
     builder: (sheetContext) {
       return DraggableScrollableSheet(
-        initialChildSize: 0.4 + (variants.length * 0.1),
+        initialChildSize:
+            DeviceUtils.isTablet(context)
+                ? 0.1 + (variants.length * 0.1)
+                : 0.4 + (variants.length * 0.1),
         minChildSize: 0.1,
         maxChildSize: 0.9,
         expand: false,

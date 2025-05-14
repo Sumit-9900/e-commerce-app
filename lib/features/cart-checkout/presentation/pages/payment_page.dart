@@ -1,8 +1,11 @@
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
+import 'package:ecommerce_app/core/utils/device_utils.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/cubit/payment_cubit.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/enums/payment.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/cart_checkout_button.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/input_field.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/payment_option_tile.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/section_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -36,32 +39,20 @@ class _PaymentPageState extends State<PaymentPage> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+    final isTablet = DeviceUtils.isTablet(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Payment"), centerTitle: true),
+      appBar: AppBar(title: const Text("Payment")),
       bottomNavigationBar: Padding(
         padding: EdgeInsets.all(16),
-        child: SizedBox(
-          width: double.infinity,
-          height: 50,
-          child: ElevatedButton(
-            onPressed: () {
-              if (formKey.currentState!.validate()) {
-                context.pushNamed(AppRouterConstants.productConfirmationRoute);
-              }
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: theme.colorScheme.primary,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-            ),
-            child: const Text(
-              "Pay Now",
-              style: TextStyle(fontSize: 18, color: Colors.black),
-            ),
-          ),
+        child: CartCheckoutButton(
+          isTablet: isTablet,
+          label: 'Pay Now',
+          onPressed: () {
+            if (formKey.currentState!.validate()) {
+              context.pushNamed(AppRouterConstants.productConfirmationRoute);
+            }
+          },
         ),
       ),
       body: BlocBuilder<PaymentCubit, PaymentState>(
@@ -77,20 +68,15 @@ class _PaymentPageState extends State<PaymentPage> {
                 child: Column(
                   children: [
                     // Section: Payment Method
-                    const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Select Payment Method',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
+                    SectionTitle(
+                      title: 'Select Payment Method',
+                      isTablet: isTablet,
                     ),
                     const SizedBox(height: 10),
                     PaymentOptionTile(
                       title: 'Credit / Debit Card',
                       icon: Icons.credit_card,
+                      isTablet: isTablet,
                       selected: selected == PaymentMethod.card,
                       onTap:
                           () => context.read<PaymentCubit>().changePaymentTile(
@@ -100,6 +86,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     PaymentOptionTile(
                       title: 'UPI / Net Banking',
                       icon: Icons.account_balance_wallet_outlined,
+                      isTablet: isTablet,
                       selected: selected == PaymentMethod.upi,
                       onTap:
                           () => context.read<PaymentCubit>().changePaymentTile(
@@ -109,6 +96,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     PaymentOptionTile(
                       title: 'Cash on Delivery',
                       icon: Icons.payments_outlined,
+                      isTablet: isTablet,
                       selected: selected == PaymentMethod.cod,
                       onTap:
                           () => context.read<PaymentCubit>().changePaymentTile(
@@ -119,25 +107,21 @@ class _PaymentPageState extends State<PaymentPage> {
 
                     // Dynamic Form Section
                     if (selected == PaymentMethod.card) ...[
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: const Text(
-                          'Enter Card Details',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
+                      SectionTitle(
+                        title: 'Enter Card Details',
+                        isTablet: isTablet,
                       ),
                       const SizedBox(height: 10),
                       InputField(
                         label: 'Cardholder Name',
                         controller: cardHolderController,
+                        isTablet: isTablet,
                       ),
                       InputField(
                         label: 'Card Number',
                         controller: cardNumberController,
                         keyboardType: TextInputType.number,
+                        isTablet: isTablet,
                       ),
                       Row(
                         children: [
@@ -146,6 +130,7 @@ class _PaymentPageState extends State<PaymentPage> {
                               label: 'Expiry Date',
                               controller: expiryDateController,
                               keyboardType: TextInputType.datetime,
+                              isTablet: isTablet,
                             ),
                           ),
                           const SizedBox(width: 12),
@@ -155,6 +140,7 @@ class _PaymentPageState extends State<PaymentPage> {
                               controller: cvvController,
                               keyboardType: TextInputType.number,
                               isObscured: true,
+                              isTablet: isTablet,
                             ),
                           ),
                         ],
@@ -171,10 +157,15 @@ class _PaymentPageState extends State<PaymentPage> {
                         ),
                       ),
                       const SizedBox(height: 10),
-                      InputField(label: 'UPI ID', controller: upiIdController),
+                      InputField(
+                        label: 'UPI ID',
+                        controller: upiIdController,
+                        isTablet: isTablet,
+                      ),
                       InputField(
                         label: 'Bank Name',
                         controller: bankNameController,
+                        isTablet: isTablet,
                       ),
                     ] else if (selected == PaymentMethod.cod) ...[
                       const Text(

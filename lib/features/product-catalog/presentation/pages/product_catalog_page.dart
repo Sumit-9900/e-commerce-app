@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
+import 'package:ecommerce_app/core/utils/device_utils.dart';
 import 'package:ecommerce_app/core/utils/show_snackbar.dart';
 import 'package:ecommerce_app/core/widgets/loader.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/bloc/products_bloc.dart';
@@ -37,6 +38,7 @@ class _ProductCatalogPageState extends State<ProductCatalogPage> {
 
   @override
   Widget build(BuildContext context) {
+    final isTablet = DeviceUtils.isTablet(context);
     return GestureDetector(
       onTap: () {
         searchFocusNode.unfocus();
@@ -134,6 +136,7 @@ class _ProductCatalogPageState extends State<ProductCatalogPage> {
                                     SortFilterButton(
                                       text: 'Sort',
                                       icon: Icons.sort_rounded,
+                                      isTablet: isTablet,
                                       onPressed: () {
                                         bottomDraggableSortSheet(context);
                                       },
@@ -142,6 +145,7 @@ class _ProductCatalogPageState extends State<ProductCatalogPage> {
                                     SortFilterButton(
                                       text: 'Filter',
                                       icon: Icons.filter_alt,
+                                      isTablet: isTablet,
                                       onPressed: () {
                                         bottomDraggableFilterSheet(context);
                                       },
@@ -155,7 +159,7 @@ class _ProductCatalogPageState extends State<ProductCatalogPage> {
                               child: MasonryGridView.builder(
                                 gridDelegate:
                                     SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                                      crossAxisCount: 2,
+                                      crossAxisCount: isTablet ? 4 : 2,
                                     ),
                                 mainAxisSpacing: 12,
                                 crossAxisSpacing: 12,

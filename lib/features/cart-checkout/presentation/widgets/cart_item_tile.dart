@@ -12,6 +12,7 @@ class CartItemTile extends StatelessWidget {
   final String color;
   final double price;
   final String quantity;
+  final bool isTablet;
 
   const CartItemTile({
     super.key,
@@ -22,6 +23,7 @@ class CartItemTile extends StatelessWidget {
     required this.size,
     required this.color,
     required this.quantity,
+    required this.isTablet,
   });
 
   @override
@@ -40,8 +42,8 @@ class CartItemTile extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               child: CachedNetworkImage(
                 imageUrl: imageUrl,
-                height: 80,
-                width: 70,
+                height: isTablet ? 120 : 80,
+                width: isTablet ? 100 : 70,
                 fit: BoxFit.cover,
                 placeholder:
                     (context, url) =>
@@ -58,17 +60,26 @@ class CartItemTile extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: isTablet ? 24 : 14,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   const SizedBox(height: 4),
                   Text(
                     'Size - $size    Color - $color',
-                    style: const TextStyle(color: Colors.black54, fontSize: 12),
+                    style: TextStyle(
+                      color: Colors.black54,
+                      fontSize: isTablet ? 20 : 12,
+                    ),
                   ),
                   const SizedBox(height: 4),
                   Text(
                     '${Const.indianRuppee}${price.toStringAsFixed(1)}',
-                    style: const TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: isTablet ? 22 : 12,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
@@ -81,7 +92,13 @@ class CartItemTile extends StatelessWidget {
                   );
                 }),
                 const SizedBox(width: 8),
-                Text(quantity, style: TextStyle(fontWeight: FontWeight.w600)),
+                Text(
+                  quantity,
+                  style: TextStyle(
+                    fontSize: isTablet ? 22 : 12,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
                 const SizedBox(width: 8),
                 _circleButton(Icons.add, () {
                   context.read<CartBloc>().add(

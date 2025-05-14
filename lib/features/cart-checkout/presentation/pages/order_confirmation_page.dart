@@ -1,9 +1,12 @@
 import 'package:ecommerce_app/core/constants/const.dart';
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
+import 'package:ecommerce_app/core/utils/device_utils.dart';
 import 'package:ecommerce_app/core/utils/order_utils.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/bloc/cart_bloc.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/cubit/payment_cubit.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/enums/payment.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/cart_checkout_button.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/summary_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -25,11 +28,19 @@ class OrderConfirmationPage extends StatelessWidget {
     final totalProductPrice = OrderUtils.getSubtotal(cartProducts);
     final totalAmount = OrderUtils.getTotal(totalProductPrice);
     final uniqueId = '#ORD${Uuid().v4().split('-').first.toUpperCase()}';
+    final isTablet = DeviceUtils.isTablet(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Order Confirmation"),
-        centerTitle: true,
+      appBar: AppBar(title: const Text("Order Confirmation")),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: CartCheckoutButton(
+          isTablet: isTablet,
+          label: 'Continue Shopping',
+          onPressed: () {
+            context.goNamed(AppRouterConstants.productCatalogRoute);
+          },
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -41,81 +52,49 @@ class OrderConfirmationPage extends StatelessWidget {
             // ✅ Success Icon
             Icon(
               Icons.check_circle_outline_rounded,
-              size: 90,
+              size: isTablet ? 120 : 90,
               color: theme.colorScheme.primary,
             ),
             const SizedBox(height: 20),
 
             // ✅ Thank You Message
-            const Text(
+            Text(
               "Thank You!",
-              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: isTablet ? 34 : 26,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             const SizedBox(height: 8),
             Text(
               "Your order has been placed successfully.",
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 16,
+                fontSize: isTablet ? 24 : 16,
                 color: theme.colorScheme.onSurface.withOpacity(0.7),
               ),
             ),
             const SizedBox(height: 30),
 
             // ✅ Order Summary
-            _orderSummaryTile('Order ID', uniqueId),
-            _orderSummaryTile('Estimated Delivery', estimatedDelivery),
-            _orderSummaryTile('Payment Method', paymentInString),
-            _orderSummaryTile(
-              'Total Amount',
-              '${Const.indianRuppee}${totalAmount.toStringAsFixed(1)}',
+            SummaryTile(title: 'Order ID', value: uniqueId, isTablet: isTablet),
+            SummaryTile(
+              title: 'Estimated Delivery',
+              value: estimatedDelivery,
+              isTablet: isTablet,
             ),
-
-            const Spacer(),
-
-            // ✅ Continue Shopping Button
-            SizedBox(
-              width: double.infinity,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: () {
-                  context.goNamed(AppRouterConstants.productCatalogRoute);
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: theme.colorScheme.primary,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                child: const Text(
-                  "Continue Shopping",
-                  style: TextStyle(fontSize: 18, color: Colors.black),
-                ),
-              ),
+            SummaryTile(
+              title: 'Payment Method',
+              value: paymentInString,
+              isTablet: isTablet,
             ),
-            const SizedBox(height: 10),
+            SummaryTile(
+              title: 'Total Amount',
+              value: '${Const.indianRuppee}${totalAmount.toStringAsFixed(1)}',
+              isTablet: isTablet,
+            ),
           ],
         ),
-      ),
-    );
-  }
-
-  // 🔹 Reusable Order Summary Tile
-  Widget _orderSummaryTile(String title, String value) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            title,
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-          ),
-          Text(
-            value,
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-          ),
-        ],
       ),
     );
   }

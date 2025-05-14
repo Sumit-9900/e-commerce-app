@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/core/theme/app_colors.dart';
+import 'package:ecommerce_app/core/utils/device_utils.dart';
 import 'package:ecommerce_app/core/widgets/common_tile.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/sort_options.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/bloc/products_bloc.dart';
@@ -11,9 +12,9 @@ void bottomDraggableSortSheet(BuildContext context) {
     context: context,
     builder: (context) {
       return DraggableScrollableSheet(
-        initialChildSize: 0.8,
+        initialChildSize: DeviceUtils.isTablet(context) ? 0.5 : 0.8,
         minChildSize: 0.1,
-        maxChildSize: 0.9,
+        maxChildSize: 0.8,
         expand: false,
         builder: (ctx, scrollController) {
           return Container(

@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/utils/device_utils.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/category.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/price_range.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/rating.dart';
@@ -13,9 +14,9 @@ void bottomDraggableFilterSheet(BuildContext context) {
     context: context,
     builder: (context) {
       return DraggableScrollableSheet(
-        initialChildSize: 0.7,
+        initialChildSize: DeviceUtils.isTablet(context) ? 0.6 : 0.7,
         minChildSize: 0.3,
-        maxChildSize: 0.9,
+        maxChildSize: 0.7,
         expand: false,
         builder: (ctx, scrollController) {
           return Container(

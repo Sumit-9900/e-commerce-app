@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/core/constants/const.dart';
 import 'package:ecommerce_app/core/utils/bottom_draggable_sheet.dart';
+import 'package:ecommerce_app/core/utils/device_utils.dart';
 import 'package:ecommerce_app/core/utils/name_to_color.dart';
 import 'package:ecommerce_app/core/utils/show_snackbar.dart';
 import 'package:ecommerce_app/core/widgets/add_to_cart_button.dart';
@@ -24,6 +25,7 @@ class ProductDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isTablet = DeviceUtils.isTablet(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(categoryValues.reverse[product.category].toString()),
@@ -90,7 +92,7 @@ class ProductDetailsPage extends StatelessWidget {
                 product.name,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: isTablet ? 24 : 20,
                   fontWeight: FontWeight.w600,
                   color: Colors.black,
                 ),
@@ -101,7 +103,7 @@ class ProductDetailsPage extends StatelessWidget {
               Text(
                 '${Const.indianRuppee}${product.price}',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: isTablet ? 22 : 18,
                   fontWeight: FontWeight.w600,
                   color: Colors.black,
                 ),
@@ -247,7 +249,7 @@ class ProductDetailsPage extends StatelessWidget {
               Text(
                 'Product Details',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: isTablet ? 24 : 16,
                   fontWeight: FontWeight.w500,
                   color: Colors.black,
                 ),
@@ -268,8 +270,8 @@ class ProductDetailsPage extends StatelessWidget {
                   return RichText(
                     text: TextSpan(
                       text: description,
-                      style: const TextStyle(
-                        fontSize: 14,
+                      style: TextStyle(
+                        fontSize: isTablet ? 18 : 14,
                         height: 1.5,
                         fontWeight: FontWeight.normal,
                         color: Colors.black,
@@ -277,8 +279,8 @@ class ProductDetailsPage extends StatelessWidget {
                       children: [
                         TextSpan(
                           text: isMore ? '...Less' : '...More',
-                          style: const TextStyle(
-                            fontSize: 14,
+                          style: TextStyle(
+                            fontSize: isTablet ? 18 : 14,
                             fontWeight: FontWeight.bold,
                             color: Colors.lightBlue,
                           ),
@@ -299,7 +301,7 @@ class ProductDetailsPage extends StatelessWidget {
               Text(
                 'Reviews',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: isTablet ? 22 : 18,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
@@ -308,7 +310,7 @@ class ProductDetailsPage extends StatelessWidget {
               Text(
                 '${product.rating.toStringAsFixed(1)} Ratings',
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: isTablet ? 26 : 22,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
@@ -316,7 +318,10 @@ class ProductDetailsPage extends StatelessWidget {
               const SizedBox(height: 5),
               Text(
                 '${product.reviews.length} Reviews',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                style: TextStyle(
+                  fontSize: isTablet ? 20 : 16,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
               const SizedBox(height: 5),
               ListView.separated(
@@ -326,7 +331,7 @@ class ProductDetailsPage extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   final review = product.reviews[index];
-                  return ReviewTile(review: review);
+                  return ReviewTile(review: review, isTablet: isTablet);
                 },
               ),
               const SizedBox(height: 80),

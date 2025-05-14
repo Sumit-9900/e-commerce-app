@@ -5,12 +5,14 @@ class InputField extends StatelessWidget {
   final TextEditingController controller;
   final TextInputType keyboardType;
   final bool isObscured;
+  final bool isTablet;
   const InputField({
     super.key,
     required this.label,
     required this.controller,
     this.keyboardType = TextInputType.name,
     this.isObscured = false,
+    required this.isTablet,
   });
 
   @override
@@ -21,6 +23,7 @@ class InputField extends StatelessWidget {
         controller: controller,
         keyboardType: keyboardType,
         obscureText: isObscured,
+        style: TextStyle(fontSize: isTablet ? 24 : 18),
         validator: (value) {
           if (value!.trim().isEmpty) {
             return '$label is missing!';
@@ -31,6 +34,7 @@ class InputField extends StatelessWidget {
         },
         decoration: InputDecoration(
           hintText: label,
+          hintStyle: TextStyle(fontSize: isTablet ? 24 : 18),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
         ),
       ),

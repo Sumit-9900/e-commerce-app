@@ -4,11 +4,13 @@ class SortFilterButton extends StatelessWidget {
   final String text;
   final IconData icon;
   final VoidCallback onPressed;
+  final bool isTablet;
   const SortFilterButton({
     super.key,
     required this.text,
     required this.icon,
     required this.onPressed,
+    required this.isTablet,
   });
 
   @override
@@ -18,7 +20,7 @@ class SortFilterButton extends StatelessWidget {
       label: Text(
         text,
         style: TextStyle(
-          fontSize: 14,
+          fontSize: isTablet ? 18 : 14,
           fontWeight: FontWeight.normal,
           color: Colors.black,
         ),

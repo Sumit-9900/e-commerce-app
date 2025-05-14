@@ -1,7 +1,11 @@
 import 'package:ecommerce_app/core/constants/const.dart';
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
+import 'package:ecommerce_app/core/utils/device_utils.dart';
 import 'package:ecommerce_app/core/utils/order_utils.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/cart_checkout_button.dart';
 import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/checkout_item_tile.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/section_title.dart';
+import 'package:ecommerce_app/features/cart-checkout/presentation/widgets/summary_tile.dart';
 import 'package:ecommerce_app/features/cart/domain/entities/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -25,20 +29,20 @@ class _CheckoutPageState extends State<CheckoutPage> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final subTotal = OrderUtils.getSubtotal(widget.cartProducts);
     final tax = OrderUtils.getTax(subTotal);
     final shipping = OrderUtils.getShipping(subTotal);
     final totalPrice = OrderUtils.getTotal(subTotal);
+    final isTablet = DeviceUtils.isTablet(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Checkout"), centerTitle: true),
+      appBar: AppBar(title: const Text("Checkout")),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             // Delivery Address Section
-            _sectionTitle("Products"),
+            SectionTitle(title: "Products", isTablet: isTablet),
             const SizedBox(height: 2),
             Expanded(
               child: ListView.builder(
@@ -52,6 +56,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     size: cartProduct.size,
                     color: cartProduct.color,
                     quantity: cartProduct.quantity.toString(),
+                    isTablet: isTablet,
                   );
                 },
               ),
@@ -60,67 +65,49 @@ class _CheckoutPageState extends State<CheckoutPage> {
             const SizedBox(height: 20),
 
             // Order Summary
-            _sectionTitle("Order Summary"),
+            SectionTitle(title: "Order Summary", isTablet: isTablet),
             _infoCard(
               context,
               child: Column(
                 children: [
-                  _SummaryRow(
-                    "Subtotal",
-                    "${Const.indianRuppee}${subTotal.toStringAsFixed(1)}",
+                  SummaryTile(
+                    title: "Subtotal",
+                    value:
+                        "${Const.indianRuppee}${subTotal.toStringAsFixed(1)}",
+                    isTablet: isTablet,
                   ),
-                  _SummaryRow(
-                    "Shipping",
-                    "${Const.indianRuppee}${shipping.toStringAsFixed(1)}",
+                  SummaryTile(
+                    title: "Shipping",
+                    value:
+                        "${Const.indianRuppee}${shipping.toStringAsFixed(1)}",
+                    isTablet: isTablet,
                   ),
-                  _SummaryRow(
-                    "Tax",
-                    "${Const.indianRuppee}${tax.toStringAsFixed(1)}",
+                  SummaryTile(
+                    title: "Tax",
+                    value: "${Const.indianRuppee}${tax.toStringAsFixed(1)}",
+                    isTablet: isTablet,
                   ),
                   Divider(),
-                  _SummaryRow(
-                    "Total",
-                    "${Const.indianRuppee}${totalPrice.toStringAsFixed(1)}",
+                  SummaryTile(
+                    title: "Total",
+                    value:
+                        "${Const.indianRuppee}${totalPrice.toStringAsFixed(1)}",
+                    isTablet: isTablet,
                     isTotal: true,
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 10),
-
-            // Checkout Button
-            SizedBox(
-              width: double.infinity,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: () {
-                  context.pushNamed(AppRouterConstants.productShippingRoute);
-                  // Proceed to place order
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: theme.colorScheme.primary,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                child: const Text(
-                  "Place Order",
-                  style: TextStyle(fontSize: 18, color: Colors.black),
-                ),
-              ),
+            CartCheckoutButton(
+              isTablet: isTablet,
+              label: 'Place Order',
+              onPressed: () {
+                context.pushNamed(AppRouterConstants.productShippingRoute);
+              },
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _sectionTitle(String title) {
-    return Align(
-      alignment: Alignment.centerLeft,
-      child: Text(
-        title,
-        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
       ),
     );
   }
@@ -131,33 +118,6 @@ class _CheckoutPageState extends State<CheckoutPage> {
       elevation: 1,
       color: Colors.white,
       child: Padding(padding: const EdgeInsets.all(12.0), child: child),
-    );
-  }
-}
-
-class _SummaryRow extends StatelessWidget {
-  final String label;
-  final String amount;
-  final bool isTotal;
-
-  const _SummaryRow(this.label, this.amount, {this.isTotal = false});
-
-  @override
-  Widget build(BuildContext context) {
-    final textStyle = TextStyle(
-      fontSize: isTotal ? 16 : 14,
-      fontWeight: isTotal ? FontWeight.bold : FontWeight.normal,
-    );
-
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(label, style: textStyle),
-          Text(amount, style: textStyle),
-        ],
-      ),
     );
   }
 }
