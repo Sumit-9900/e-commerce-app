@@ -47,47 +47,48 @@ void bottomDraggableSortSheet(BuildContext context) {
                       itemBuilder: (context, index) {
                         final sortOptions =
                             sortOptionsValues.reverse.values.toList();
+                        final sortOptionEnum =
+                            sortOptionsValues.map[sortOptions[index]];
                         return GestureDetector(
                           onTap: () {
                             context.read<FilterCubit>().clearFilters();
                             context.read<ProductsBloc>().add(
                               ProductsFetched(
                                 sortOptions:
-                                    sortOptionsValues.map[sortOptions[index]] ??
-                                    SortOptions.newest,
+                                    sortOptionEnum ?? SortOptions.newest,
                               ),
                             );
                             Navigator.pop(context);
                           },
-                          child:
-                              BlocSelector<ProductsBloc, ProductsState, String>(
-                                selector: (state) {
-                                  if (state is ProductsSuccess) {
-                                    final selectedSortOptions =
-                                        sortOptionsValues.reverse[state
-                                            .sortOptions];
-                                    return selectedSortOptions!;
-                                  } else {
-                                    return '';
-                                  }
-                                },
-                                builder: (context, sortOption) {
-                                  final selectedOptions =
-                                      sortOptions[index] == sortOption;
+                          child: BlocSelector<
+                            ProductsBloc,
+                            ProductsState,
+                            SortOptions?
+                          >(
+                            selector: (state) {
+                              if (state is ProductsSuccess) {
+                                return state.sortOptions;
+                              }
+                              return null;
+                            },
+                            builder: (context, selectedOption) {
+                              final isSelected =
+                                  selectedOption != null &&
+                                  sortOptionEnum == selectedOption;
 
-                                  return CommonTile(
-                                    text: sortOptions[index],
-                                    widget:
-                                        selectedOptions
-                                            ? const Icon(Icons.done)
-                                            : const SizedBox(),
-                                    color:
-                                        selectedOptions
-                                            ? AppColors.purpleColor
-                                            : AppColors.tileColor,
-                                  );
-                                },
-                              ),
+                              return CommonTile(
+                                text: sortOptions[index],
+                                widget:
+                                    isSelected
+                                        ? const Icon(Icons.done)
+                                        : const SizedBox(),
+                                color:
+                                    isSelected
+                                        ? AppColors.purpleColor
+                                        : AppColors.tileColor,
+                              );
+                            },
+                          ),
                         );
                       },
                     ),

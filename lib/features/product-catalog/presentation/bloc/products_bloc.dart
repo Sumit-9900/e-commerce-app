@@ -36,14 +36,22 @@ class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
         event.selectedRating,
       );
 
+      final shouldResetSort =
+          event.sortOptions == SortOptions.newest &&
+          (event.selectedCategories.isNotEmpty ||
+              event.selectedPriceRange != null ||
+              event.selectedRating != null);
+
+      final sortOption = shouldResetSort ? null : event.sortOptions;
+
       final sortedProducts = _sortProducts(
         filterredProducts,
-        event.sortOptions,
+        sortOption ?? SortOptions.newest,
       );
       emit(
         ProductsSuccess(
           sortedProducts,
-          sortOptions: event.sortOptions,
+          sortOptions: sortOption,
           selectedCategories: event.selectedCategories,
           selectedPriceRange: event.selectedPriceRange,
           selectedRating: event.selectedRating,
