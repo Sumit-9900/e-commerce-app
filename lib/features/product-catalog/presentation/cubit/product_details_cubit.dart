@@ -9,12 +9,14 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
     required String initialColor,
     int initialQuantity = 1,
     bool isMore = false,
+    required String initialImage,
   }) : super(
          ProductDetailsSuccess(
            size: initialSize,
            color: initialColor,
            quantity: initialQuantity,
            isMore: isMore,
+           image: initialImage,
          ),
        );
 
@@ -25,10 +27,10 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
     }
   }
 
-  void changeColor(String newColor) {
+  void changeColor(String newColor, String image) {
     final currentState = state;
     if (currentState is ProductDetailsSuccess) {
-      emit(currentState.copyWith(color: newColor));
+      emit(currentState.copyWith(color: newColor, image: image));
     }
   }
 

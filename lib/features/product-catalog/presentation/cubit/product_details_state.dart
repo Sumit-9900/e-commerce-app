@@ -10,11 +10,13 @@ final class ProductDetailsSuccess extends ProductDetailsState {
   final String color;
   final int quantity;
   final bool isMore;
+  final String image;
   ProductDetailsSuccess({
     required this.size,
     required this.color,
     required this.quantity,
     required this.isMore,
+    required this.image,
   });
 
   ProductDetailsSuccess copyWith({
@@ -22,12 +24,14 @@ final class ProductDetailsSuccess extends ProductDetailsState {
     String? color,
     int? quantity,
     bool? isMore,
+    String? image,
   }) {
     return ProductDetailsSuccess(
       size: size ?? this.size,
       color: color ?? this.color,
       quantity: quantity ?? this.quantity,
       isMore: isMore ?? this.isMore,
+      image: image ?? this.image,
     );
   }
 }

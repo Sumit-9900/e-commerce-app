@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/core/router/app_router_constants.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/entities/product.dart';
+import 'package:ecommerce_app/features/product-catalog/domain/entities/product_details_params.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/color.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/size.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/cubit/product_details_cubit.dart';
@@ -26,13 +27,17 @@ class AppRouterConfig {
           final product = state.extra! as Product;
           final initialSize = sizeValues.reverse[product.variants.sizes.first]!;
           final initialColor =
-              colorValues.reverse[product.variants.colors.first];
+              colorValues.reverse[product.variants.colors.first]!;
+          final initialImage = product.images[0];
+
+          final params = ProductDetailsParams(
+            initialSize: initialSize,
+            initialColor: initialColor,
+            initialImage: initialImage,
+          );
+
           return BlocProvider(
-            create:
-                (_) => getIt<ProductDetailsCubit>(
-                  param1: initialSize,
-                  param2: initialColor,
-                ),
+            create: (_) => getIt<ProductDetailsCubit>(param1: params),
             child: ProductDetailsPage(product: product),
           );
         },

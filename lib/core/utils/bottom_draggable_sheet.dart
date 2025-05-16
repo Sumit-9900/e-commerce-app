@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/core/theme/app_colors.dart';
 import 'package:ecommerce_app/core/utils/name_to_color.dart';
 import 'package:ecommerce_app/core/widgets/common_tile.dart';
+import 'package:ecommerce_app/features/product-catalog/domain/entities/product.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/cubit/product_details_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/size.dart'
@@ -11,6 +12,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 void bottomDraggableSheet(
   BuildContext context, {
+  required Product product,
   required String headingText,
   required List<dynamic> variants,
 }) {
@@ -97,7 +99,10 @@ void bottomDraggableSheet(
                                 } else if (variant is c.Color) {
                                   final newColor =
                                       c.colorValues.reverse[variant]!;
-                                  detailsCubit.changeColor(newColor);
+                                  detailsCubit.changeColor(
+                                    newColor,
+                                    product.images[index],
+                                  );
                                 }
                                 Navigator.of(context).pop();
                               },
