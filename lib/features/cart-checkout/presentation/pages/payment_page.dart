@@ -24,6 +24,12 @@ class _PaymentPageState extends State<PaymentPage> {
   final bankNameController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    context.read<PaymentCubit>().resetPaymentMethod();
+  }
+
+  @override
   void dispose() {
     cardHolderController.dispose();
     cardNumberController.dispose();
@@ -39,7 +45,7 @@ class _PaymentPageState extends State<PaymentPage> {
     final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Payment"), centerTitle: true),
+      appBar: AppBar(title: const Text("Payment")),
       bottomNavigationBar: Padding(
         padding: EdgeInsets.all(16),
         child: SizedBox(
