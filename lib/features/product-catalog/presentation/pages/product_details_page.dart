@@ -83,24 +83,20 @@ class ProductDetailsPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Hero(
-                tag: product.id,
-                child: BlocSelector<
-                  ProductDetailsCubit,
-                  ProductDetailsState,
-                  String
-                >(
-                  selector: (state) {
-                    if (state is ProductDetailsSuccess) {
-                      return state.image;
-                    } else {
-                      return product.images[0];
-                    }
-                  },
-                  builder: (context, selectedImage) {
-                    return CachedImage(imageUrl: selectedImage, height: 300);
-                  },
-                ),
+              BlocSelector<ProductDetailsCubit, ProductDetailsState, String>(
+                selector: (state) {
+                  if (state is ProductDetailsSuccess) {
+                    return state.image;
+                  } else {
+                    return product.images[0];
+                  }
+                },
+                builder: (context, selectedImage) {
+                  return Hero(
+                    tag: product.id,
+                    child: CachedImage(imageUrl: selectedImage, height: 300),
+                  );
+                },
               ),
               const SizedBox(height: 10),
               Text(
