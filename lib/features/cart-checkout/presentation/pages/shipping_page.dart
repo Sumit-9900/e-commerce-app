@@ -26,6 +26,12 @@ class _ShippingPageState extends State<ShippingPage> {
   final countryController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    context.read<DeliveryOptionCubit>().resetDeliveryOption();
+  }
+
+  @override
   void dispose() {
     nameController.dispose();
     phoneController.dispose();

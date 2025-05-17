@@ -27,6 +27,12 @@ class _PaymentPageState extends State<PaymentPage> {
   final bankNameController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    context.read<PaymentCubit>().resetPaymentMethod();
+  }
+
+  @override
   void dispose() {
     cardHolderController.dispose();
     cardNumberController.dispose();

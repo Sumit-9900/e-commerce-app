@@ -7,6 +7,8 @@ sealed class PaymentState extends Equatable {
   List<Object> get props => [];
 }
 
+final class PaymentInitial extends PaymentState {}
+
 final class PaymentSuccess extends PaymentState {
   final PaymentMethod method;
   const PaymentSuccess(this.method);
