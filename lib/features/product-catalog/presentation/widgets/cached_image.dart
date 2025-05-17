@@ -20,10 +20,14 @@ class CachedImage extends StatelessWidget {
             (context, url, error) => Container(
               color: Colors.grey,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.error, color: Colors.red),
-                  const SizedBox(height: 3),
-                  Text('Unable to fetch data!'),
+                  Icon(Icons.error, color: Colors.red, size: 50),
+                  const SizedBox(height: 15),
+                  Text(
+                    'Unable to fetch data!',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
             ),

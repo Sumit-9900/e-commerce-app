@@ -85,7 +85,22 @@ class ProductDetailsPage extends StatelessWidget {
             children: [
               Hero(
                 tag: product.id,
-                child: CachedImage(imageUrl: product.images[0], height: 300),
+                child: BlocSelector<
+                  ProductDetailsCubit,
+                  ProductDetailsState,
+                  String
+                >(
+                  selector: (state) {
+                    if (state is ProductDetailsSuccess) {
+                      return state.image;
+                    } else {
+                      return product.images[0];
+                    }
+                  },
+                  builder: (context, selectedImage) {
+                    return CachedImage(imageUrl: selectedImage, height: 300);
+                  },
+                ),
               ),
               const SizedBox(height: 10),
               Text(
@@ -141,6 +156,7 @@ class ProductDetailsPage extends StatelessWidget {
                       onPressed: () {
                         bottomDraggableSheet(
                           context,
+                          product: product,
                           headingText: 'Size',
                           variants: product.variants.sizes,
                         );
@@ -181,6 +197,7 @@ class ProductDetailsPage extends StatelessWidget {
                       onPressed: () {
                         bottomDraggableSheet(
                           context,
+                          product: product,
                           headingText: 'Color',
                           variants: product.variants.colors,
                         );

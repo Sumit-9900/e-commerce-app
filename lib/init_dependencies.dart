@@ -12,6 +12,7 @@ import 'package:ecommerce_app/features/cart/domain/usecases/get_cart_items.dart'
 import 'package:ecommerce_app/features/cart/domain/usecases/increment_cart_quantity.dart';
 import 'package:ecommerce_app/features/product-catalog/data/datasources/product_local_datasource.dart';
 import 'package:ecommerce_app/features/product-catalog/data/repository/product_repository_impl.dart';
+import 'package:ecommerce_app/features/product-catalog/domain/entities/product_details_params.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/repository/product_repository.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/usecases/get_all_products.dart';
 import 'package:ecommerce_app/features/product-catalog/presentation/bloc/products_bloc.dart';
@@ -74,10 +75,11 @@ Future<void> initDependencies() async {
   );
 
   // cubit
-  getIt.registerFactoryParam<ProductDetailsCubit, String, String>(
-    (initialSize, initialColor) => ProductDetailsCubit(
-      initialSize: initialSize,
-      initialColor: initialColor,
+  getIt.registerFactoryParam<ProductDetailsCubit, ProductDetailsParams, void>(
+    (params, _) => ProductDetailsCubit(
+      initialSize: params.initialSize,
+      initialColor: params.initialColor,
+      initialImage: params.initialImage,
     ),
   );
 
