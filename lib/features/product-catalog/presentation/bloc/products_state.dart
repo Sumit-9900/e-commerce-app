@@ -14,7 +14,7 @@ final class ProductsFailure extends ProductsState {
 
 final class ProductsSuccess extends ProductsState {
   final ProductCatalog productCatalog;
-  final SortOptions? sortOptions;
+  final SortOptions sortOptions;
   final List<Category> selectedCategories;
   final PriceRange? selectedPriceRange;
   final Rating? selectedRating;
