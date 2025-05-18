@@ -9,7 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 void bottomDraggableFilterSheet(BuildContext context) {
   final filtersCubit = context.read<FilterCubit>();
-  final productsCubit = context.read<ProductsBloc>();
+  final productsBloc = context.read<ProductsBloc>();
   showModalBottomSheet(
     context: context,
     builder: (context) {
@@ -47,15 +47,21 @@ void bottomDraggableFilterSheet(BuildContext context) {
                       ElevatedButton(
                         onPressed: () {
                           final filterState = filtersCubit.state;
-                          productsCubit.add(
-                            ProductsFetched(
-                              selectedCategories:
-                                  filterState.selectedCategories,
-                              selectedPriceRange:
-                                  filterState.selectedPriceRange,
-                              selectedRating: filterState.selectedRating,
-                            ),
-                          );
+                          final productsState = productsBloc.state;
+
+                          if (productsState is ProductsSuccess) {
+                            productsBloc.add(
+                              ProductsFetched(
+                                sortOptions: productsState.sortOptions,
+                                selectedCategories:
+                                    filterState.selectedCategories,
+                                selectedPriceRange:
+                                    filterState.selectedPriceRange,
+                                selectedRating: filterState.selectedRating,
+                              ),
+                            );
+                          }
+
                           Navigator.of(context).pop();
                         },
                         child: Text('Apply'),

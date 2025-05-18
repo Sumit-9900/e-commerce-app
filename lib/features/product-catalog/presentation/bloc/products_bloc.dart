@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/core/usecase/usecase.dart';
+import 'package:ecommerce_app/features/product-catalog/domain/entities/product.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/entities/product_catalog.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/category.dart';
 import 'package:ecommerce_app/features/product-catalog/domain/enums/price_range.dart';
@@ -36,18 +37,9 @@ class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
         event.selectedRating,
       );
 
-      final shouldResetSort =
-          event.sortOptions == SortOptions.newest &&
-          (event.selectedCategories.isNotEmpty ||
-              event.selectedPriceRange != null ||
-              event.selectedRating != null);
+      final sortOption = event.sortOptions;
 
-      final sortOption = shouldResetSort ? null : event.sortOptions;
-
-      final sortedProducts = _sortProducts(
-        filterredProducts,
-        sortOption ?? SortOptions.newest,
-      );
+      final sortedProducts = _sortProducts(filterredProducts, sortOption);
       emit(
         ProductsSuccess(
           sortedProducts,
@@ -61,7 +53,7 @@ class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
   }
 
   ProductCatalog _sortProducts(ProductCatalog catalog, SortOptions sortOption) {
-    final products = catalog.products;
+    final products = List<Product>.from(catalog.products);
 
     switch (sortOption) {
       case SortOptions.priceHighToLow:
